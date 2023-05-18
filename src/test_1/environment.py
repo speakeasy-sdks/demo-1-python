@@ -36,11 +36,12 @@ class Environment:
         base_url = self._server_url
         
         url = utils.generate_url(operations.DeleteOrgsOrgIDAppsAppIDEnvsEnvIDRequest, base_url, '/orgs/{orgId}/apps/{appId}/envs/{envId}', request)
-        
+        headers = {}
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
         
-        http_res = client.request('DELETE', url)
+        http_res = client.request('DELETE', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.DeleteOrgsOrgIDAppsAppIDEnvsEnvIDResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -62,11 +63,12 @@ class Environment:
         base_url = self._server_url
         
         url = utils.generate_url(operations.GetOrgsOrgIDAppsAppIDEnvsRequest, base_url, '/orgs/{orgId}/apps/{appId}/envs', request)
-        
+        headers = {}
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
         
-        http_res = client.request('GET', url)
+        http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.GetOrgsOrgIDAppsAppIDEnvsResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -86,11 +88,12 @@ class Environment:
         base_url = self._server_url
         
         url = utils.generate_url(operations.GetOrgsOrgIDAppsAppIDEnvsEnvIDRequest, base_url, '/orgs/{orgId}/apps/{appId}/envs/{envId}', request)
-        
+        headers = {}
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
         
-        http_res = client.request('GET', url)
+        http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.GetOrgsOrgIDAppsAppIDEnvsEnvIDResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -118,13 +121,13 @@ class Environment:
         base_url = self._server_url
         
         url = utils.generate_url(operations.PostOrgsOrgIDAppsAppIDEnvsRequest, base_url, '/orgs/{orgId}/apps/{appId}/envs', request)
-        
         headers = {}
         req_content_type, data, form = utils.serialize_request_body(request, "environment_definition_request", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
         
@@ -160,13 +163,13 @@ class Environment:
         base_url = self._server_url
         
         url = utils.generate_url(operations.PutOrgsOrgIDAppsAppIDEnvsEnvIDFromDeployIDRequest, base_url, '/orgs/{orgId}/apps/{appId}/envs/{envId}/from_deploy_id', request)
-        
         headers = {}
         req_content_type, data, form = utils.serialize_request_body(request, "request_body", 'string')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
         

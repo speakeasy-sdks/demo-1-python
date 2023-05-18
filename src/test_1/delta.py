@@ -58,11 +58,12 @@ class Delta:
         base_url = self._server_url
         
         url = utils.generate_url(operations.GetDeltaRequest, base_url, '/orgs/{orgId}/apps/{appId}/deltas/{deltaId}', request)
-        
+        headers = {}
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
         
-        http_res = client.request('GET', url)
+        http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.GetDeltaResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -83,12 +84,13 @@ class Delta:
         base_url = self._server_url
         
         url = utils.generate_url(operations.GetOrgsOrgIDAppsAppIDDeltasRequest, base_url, '/orgs/{orgId}/apps/{appId}/deltas', request)
-        
+        headers = {}
         query_params = utils.get_query_params(operations.GetOrgsOrgIDAppsAppIDDeltasRequest, request)
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
         
-        http_res = client.request('GET', url, params=query_params)
+        http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.GetOrgsOrgIDAppsAppIDDeltasResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -106,13 +108,13 @@ class Delta:
         base_url = self._server_url
         
         url = utils.generate_url(operations.PatchOrgsOrgIDAppsAppIDDeltasDeltaIDRequest, base_url, '/orgs/{orgId}/apps/{appId}/deltas/{deltaId}', request)
-        
         headers = {}
         req_content_type, data, form = utils.serialize_request_body(request, "request_body", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
         
@@ -141,13 +143,13 @@ class Delta:
         base_url = self._server_url
         
         url = utils.generate_url(operations.PostOrgsOrgIDAppsAppIDDeltasRequest, base_url, '/orgs/{orgId}/apps/{appId}/deltas', request)
-        
         headers = {}
         req_content_type, data, form = utils.serialize_request_body(request, "delta_request", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
         
@@ -173,13 +175,13 @@ class Delta:
         base_url = self._server_url
         
         url = utils.generate_url(operations.PutDeltaRequest, base_url, '/orgs/{orgId}/apps/{appId}/deltas/{deltaId}', request)
-        
         headers = {}
         req_content_type, data, form = utils.serialize_request_body(request, "delta_request", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
         
@@ -208,13 +210,13 @@ class Delta:
         base_url = self._server_url
         
         url = utils.generate_url(operations.PutOrgsOrgIDAppsAppIDDeltasDeltaIDMetadataArchivedRequest, base_url, '/orgs/{orgId}/apps/{appId}/deltas/{deltaId}/metadata/archived', request)
-        
         headers = {}
         req_content_type, data, form = utils.serialize_request_body(request, "request_body", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
         
@@ -241,13 +243,13 @@ class Delta:
         base_url = self._server_url
         
         url = utils.generate_url(operations.PutOrgsOrgIDAppsAppIDDeltasDeltaIDMetadataEnvIDRequest, base_url, '/orgs/{orgId}/apps/{appId}/deltas/{deltaId}/metadata/env_id', request)
-        
         headers = {}
         req_content_type, data, form = utils.serialize_request_body(request, "request_body", 'string')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
         
@@ -274,13 +276,13 @@ class Delta:
         base_url = self._server_url
         
         url = utils.generate_url(operations.PutOrgsOrgIDAppsAppIDDeltasDeltaIDMetadataNameRequest, base_url, '/orgs/{orgId}/apps/{appId}/deltas/{deltaId}/metadata/name', request)
-        
         headers = {}
         req_content_type, data, form = utils.serialize_request_body(request, "request_body", 'string')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
         

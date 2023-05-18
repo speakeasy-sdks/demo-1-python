@@ -32,12 +32,13 @@ class ArtefactVersion:
         base_url = self._server_url
         
         url = utils.generate_url(operations.GetOrgsOrgIDArtefactVersionsRequest, base_url, '/orgs/{orgId}/artefact-versions', request)
-        
+        headers = {}
         query_params = utils.get_query_params(operations.GetOrgsOrgIDArtefactVersionsRequest, request)
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
         
-        http_res = client.request('GET', url, params=query_params)
+        http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.GetOrgsOrgIDArtefactVersionsResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -61,11 +62,12 @@ class ArtefactVersion:
         base_url = self._server_url
         
         url = utils.generate_url(operations.GetOrgsOrgIDArtefactVersionsArtefactVersionIDRequest, base_url, '/orgs/{orgId}/artefact-versions/{artefactVersionId}', request)
-        
+        headers = {}
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
         
-        http_res = client.request('GET', url)
+        http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.GetOrgsOrgIDArtefactVersionsArtefactVersionIDResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -89,12 +91,13 @@ class ArtefactVersion:
         base_url = self._server_url
         
         url = utils.generate_url(operations.GetOrgsOrgIDArtefactsArtefactIDVersionsRequest, base_url, '/orgs/{orgId}/artefacts/{artefactId}/versions', request)
-        
+        headers = {}
         query_params = utils.get_query_params(operations.GetOrgsOrgIDArtefactsArtefactIDVersionsRequest, request)
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
         
-        http_res = client.request('GET', url, params=query_params)
+        http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.GetOrgsOrgIDArtefactsArtefactIDVersionsResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -118,13 +121,13 @@ class ArtefactVersion:
         base_url = self._server_url
         
         url = utils.generate_url(operations.PatchOrgsOrgIDArtefactsArtefactIDVersionsVersionIDRequest, base_url, '/orgs/{orgId}/artefacts/{artefactId}/versions/{versionId}', request)
-        
         headers = {}
         req_content_type, data, form = utils.serialize_request_body(request, "update_artefact_version_payload_request", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
         
@@ -150,7 +153,6 @@ class ArtefactVersion:
         base_url = self._server_url
         
         url = utils.generate_url(operations.PostOrgsOrgIDArtefactVersionsRequest, base_url, '/orgs/{orgId}/artefact-versions', request)
-        
         headers = {}
         req_content_type, data, form = utils.serialize_request_body(request, "add_artefact_version_payload_request", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
@@ -158,6 +160,7 @@ class ArtefactVersion:
         if data is None and form is None:
             raise Exception('request body is required')
         query_params = utils.get_query_params(operations.PostOrgsOrgIDArtefactVersionsRequest, request)
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
         

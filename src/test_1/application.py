@@ -36,11 +36,12 @@ class Application:
         base_url = self._server_url
         
         url = utils.generate_url(operations.DeleteOrgsOrgIDAppsAppIDRequest, base_url, '/orgs/{orgId}/apps/{appId}', request)
-        
+        headers = {}
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
         
-        http_res = client.request('DELETE', url)
+        http_res = client.request('DELETE', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.DeleteOrgsOrgIDAppsAppIDResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -62,11 +63,12 @@ class Application:
         base_url = self._server_url
         
         url = utils.generate_url(operations.GetOrgsOrgIDAppsRequest, base_url, '/orgs/{orgId}/apps', request)
-        
+        headers = {}
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
         
-        http_res = client.request('GET', url)
+        http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.GetOrgsOrgIDAppsResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -86,11 +88,12 @@ class Application:
         base_url = self._server_url
         
         url = utils.generate_url(operations.GetOrgsOrgIDAppsAppIDRequest, base_url, '/orgs/{orgId}/apps/{appId}', request)
-        
+        headers = {}
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
         
-        http_res = client.request('GET', url)
+        http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.GetOrgsOrgIDAppsAppIDResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -114,13 +117,13 @@ class Application:
         base_url = self._server_url
         
         url = utils.generate_url(operations.PostOrgsOrgIDAppsRequest, base_url, '/orgs/{orgId}/apps', request)
-        
         headers = {}
         req_content_type, data, form = utils.serialize_request_body(request, "application_creation_request", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
         

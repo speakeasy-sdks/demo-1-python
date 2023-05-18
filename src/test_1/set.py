@@ -60,11 +60,12 @@ class Set:
         base_url = self._server_url
         
         url = utils.generate_url(operations.GetSetsRequest, base_url, '/orgs/{orgId}/apps/{appId}/sets', request)
-        
+        headers = {}
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
         
-        http_res = client.request('GET', url)
+        http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.GetSetsResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -85,12 +86,13 @@ class Set:
         base_url = self._server_url
         
         url = utils.generate_url(operations.GetOrgsOrgIDAppsAppIDSetsSetIDRequest, base_url, '/orgs/{orgId}/apps/{appId}/sets/{setId}', request)
-        
+        headers = {}
         query_params = utils.get_query_params(operations.GetOrgsOrgIDAppsAppIDSetsSetIDRequest, request)
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
         
-        http_res = client.request('GET', url, params=query_params)
+        http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.GetOrgsOrgIDAppsAppIDSetsSetIDResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -111,11 +113,12 @@ class Set:
         base_url = self._server_url
         
         url = utils.generate_url(operations.GetOrgsOrgIDAppsAppIDSetsSetIDDiffSourceSetIDRequest, base_url, '/orgs/{orgId}/apps/{appId}/sets/{setId}/diff/{sourceSetId}', request)
-        
+        headers = {}
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
         
-        http_res = client.request('GET', url)
+        http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.GetOrgsOrgIDAppsAppIDSetsSetIDDiffSourceSetIDResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -136,13 +139,13 @@ class Set:
         base_url = self._server_url
         
         url = utils.generate_url(operations.PostOrgsOrgIDAppsAppIDSetsSetIDRequest, base_url, '/orgs/{orgId}/apps/{appId}/sets/{setId}', request)
-        
         headers = {}
         req_content_type, data, form = utils.serialize_request_body(request, "delta_request", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
         

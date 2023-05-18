@@ -30,11 +30,12 @@ class RuntimeInfo:
         base_url = self._server_url
         
         url = utils.generate_url(operations.GetOrgsOrgIDAppsAppIDEnvsEnvIDRuntimeRequest, base_url, '/orgs/{orgId}/apps/{appId}/envs/{envId}/runtime', request)
-        
+        headers = {}
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
         
-        http_res = client.request('GET', url)
+        http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.GetOrgsOrgIDAppsAppIDEnvsEnvIDRuntimeResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -54,12 +55,13 @@ class RuntimeInfo:
         base_url = self._server_url
         
         url = utils.generate_url(operations.GetOrgsOrgIDAppsAppIDRuntimeRequest, base_url, '/orgs/{orgId}/apps/{appId}/runtime', request)
-        
+        headers = {}
         query_params = utils.get_query_params(operations.GetOrgsOrgIDAppsAppIDRuntimeRequest, request)
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
         
-        http_res = client.request('GET', url, params=query_params)
+        http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.GetOrgsOrgIDAppsAppIDRuntimeResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -79,13 +81,13 @@ class RuntimeInfo:
         base_url = self._server_url
         
         url = utils.generate_url(operations.PatchOrgsOrgIDAppsAppIDEnvsEnvIDRuntimeReplicasRequest, base_url, '/orgs/{orgId}/apps/{appId}/envs/{envId}/runtime/replicas', request)
-        
         headers = {}
         req_content_type, data, form = utils.serialize_request_body(request, "request_body", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
         
@@ -114,13 +116,13 @@ class RuntimeInfo:
         base_url = self._server_url
         
         url = utils.generate_url(operations.PutOrgsOrgIDAppsAppIDEnvsEnvIDRuntimePausedRequest, base_url, '/orgs/{orgId}/apps/{appId}/envs/{envId}/runtime/paused', request)
-        
         headers = {}
         req_content_type, data, form = utils.serialize_request_body(request, "request_body", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
         

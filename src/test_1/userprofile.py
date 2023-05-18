@@ -30,11 +30,12 @@ class UserProfile:
         base_url = self._server_url
         
         url = utils.generate_url(operations.DeleteTokensTokenIDRequest, base_url, '/tokens/{tokenId}', request)
-        
+        headers = {}
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
         
-        http_res = client.request('DELETE', url)
+        http_res = client.request('DELETE', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.DeleteTokensTokenIDResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -48,11 +49,12 @@ class UserProfile:
         base_url = self._server_url
         
         url = base_url.removesuffix('/') + '/current-user'
-        
+        headers = {}
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
         
-        http_res = client.request('GET', url)
+        http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.GetCurrentUserResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -72,11 +74,12 @@ class UserProfile:
         base_url = self._server_url
         
         url = base_url.removesuffix('/') + '/tokens'
-        
+        headers = {}
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
         
-        http_res = client.request('GET', url)
+        http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.GetTokensResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -94,11 +97,12 @@ class UserProfile:
         base_url = self._server_url
         
         url = base_url.removesuffix('/') + '/users/me'
-        
+        headers = {}
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
         
-        http_res = client.request('GET', url)
+        http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.GetUsersMeResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -118,13 +122,13 @@ class UserProfile:
         base_url = self._server_url
         
         url = base_url.removesuffix('/') + '/current-user'
-        
         headers = {}
         req_content_type, data, form = utils.serialize_request_body(request, "request", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
         
@@ -152,13 +156,13 @@ class UserProfile:
         base_url = self._server_url
         
         url = utils.generate_url(operations.PostOrgsOrgIDUsersRequest, base_url, '/orgs/{orgId}/users', request)
-        
         headers = {}
         req_content_type, data, form = utils.serialize_request_body(request, "new_service_user_request", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
         
