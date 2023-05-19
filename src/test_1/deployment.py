@@ -35,6 +35,7 @@ class Deployment:
         
         url = utils.generate_url(operations.GetOrgsOrgIDAppsAppIDEnvsEnvIDDeploysRequest, base_url, '/orgs/{orgId}/apps/{appId}/envs/{envId}/deploys', request)
         headers = {}
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -64,6 +65,7 @@ class Deployment:
         
         url = utils.generate_url(operations.GetOrgsOrgIDAppsAppIDEnvsEnvIDDeploysDeployIDRequest, base_url, '/orgs/{orgId}/apps/{appId}/envs/{envId}/deploys/{deployId}', request)
         headers = {}
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -91,6 +93,7 @@ class Deployment:
         
         url = utils.generate_url(operations.GetOrgsOrgIDAppsAppIDEnvsEnvIDDeploysDeployIDErrorsRequest, base_url, '/orgs/{orgId}/apps/{appId}/envs/{envId}/deploys/{deployId}/errors', request)
         headers = {}
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -129,6 +132,7 @@ class Deployment:
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client

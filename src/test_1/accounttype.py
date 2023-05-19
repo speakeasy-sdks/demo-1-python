@@ -31,6 +31,7 @@ class AccountType:
         
         url = utils.generate_url(operations.GetOrgsOrgIDResourcesAccountTypesRequest, base_url, '/orgs/{orgId}/resources/account-types', request)
         headers = {}
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client

@@ -33,6 +33,7 @@ class ActiveResource:
         
         url = utils.generate_url(operations.DeleteOrgsOrgIDAppsAppIDEnvsEnvIDResourcesTypeResIDRequest, base_url, '/orgs/{orgId}/apps/{appId}/envs/{envId}/resources/{type}/{resId}', request)
         headers = {}
+        headers['Accept'] = '*/*'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -52,6 +53,7 @@ class ActiveResource:
         
         url = utils.generate_url(operations.GetOrgsOrgIDAppsAppIDEnvsEnvIDResourcesRequest, base_url, '/orgs/{orgId}/apps/{appId}/envs/{envId}/resources', request)
         headers = {}
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -79,6 +81,7 @@ class ActiveResource:
         
         url = utils.generate_url(operations.GetOrgsOrgIDResourcesDefsDefIDResourcesRequest, base_url, '/orgs/{orgId}/resources/defs/{defId}/resources', request)
         headers = {}
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client

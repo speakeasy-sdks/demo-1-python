@@ -31,6 +31,7 @@ class Organization:
         
         url = base_url.removesuffix('/') + '/orgs'
         headers = {}
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -56,6 +57,7 @@ class Organization:
         
         url = utils.generate_url(operations.GetOrgsOrgIDRequest, base_url, '/orgs/{orgId}', request)
         headers = {}
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client

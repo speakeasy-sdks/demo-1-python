@@ -5,7 +5,7 @@ import dataclasses
 import dateutil.parser
 from ..shared import jsonpatchresponse as shared_jsonpatchresponse
 from ..shared import valueresponse as shared_valueresponse
-from ..shared import valuesetversionresultof_enum as shared_valuesetversionresultof_enum
+from ..shared import valuesetversionresultof as shared_valuesetversionresultof
 from dataclasses_json import Undefined, dataclass_json
 from datetime import datetime
 from marshmallow import fields
@@ -22,7 +22,7 @@ class ValueSetVersionResponse:
     created_at: datetime = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('created_at'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
     created_by: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('created_by') }})
     id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id') }})
-    result_of: shared_valuesetversionresultof_enum.ValueSetVersionResultOfEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('result_of') }})
+    result_of: shared_valuesetversionresultof.ValueSetVersionResultOf = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('result_of') }})
     source_value_set_version_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('source_value_set_version_id') }})
     updated_at: datetime = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('updated_at'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
     values: dict[str, shared_valueresponse.ValueResponse] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('values') }})

@@ -34,6 +34,7 @@ class ValueSetVersion:
         url = utils.generate_url(operations.GetOrgsOrgIDAppsAppIDEnvsEnvIDValueSetVersionsRequest, base_url, '/orgs/{orgId}/apps/{appId}/envs/{envId}/value-set-versions', request)
         headers = {}
         query_params = utils.get_query_params(operations.GetOrgsOrgIDAppsAppIDEnvsEnvIDValueSetVersionsRequest, request)
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -57,6 +58,7 @@ class ValueSetVersion:
         
         url = utils.generate_url(operations.GetOrgsOrgIDAppsAppIDEnvsEnvIDValueSetVersionsValueSetVersionIDRequest, base_url, '/orgs/{orgId}/apps/{appId}/envs/{envId}/value-set-versions/{valueSetVersionId}', request)
         headers = {}
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -87,6 +89,7 @@ class ValueSetVersion:
         url = utils.generate_url(operations.GetOrgsOrgIDAppsAppIDValueSetVersionsRequest, base_url, '/orgs/{orgId}/apps/{appId}/value-set-versions', request)
         headers = {}
         query_params = utils.get_query_params(operations.GetOrgsOrgIDAppsAppIDValueSetVersionsRequest, request)
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -110,6 +113,7 @@ class ValueSetVersion:
         
         url = utils.generate_url(operations.GetOrgsOrgIDAppsAppIDValueSetVersionsValueSetVersionIDRequest, base_url, '/orgs/{orgId}/apps/{appId}/value-set-versions/{valueSetVersionId}', request)
         headers = {}
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -147,6 +151,7 @@ class ValueSetVersion:
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -181,6 +186,7 @@ class ValueSetVersion:
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -217,6 +223,7 @@ class ValueSetVersion:
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -254,6 +261,7 @@ class ValueSetVersion:
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -288,6 +296,7 @@ class ValueSetVersion:
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -324,6 +333,7 @@ class ValueSetVersion:
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client

@@ -31,6 +31,7 @@ class AutomationRule:
         
         url = utils.generate_url(operations.DeleteOrgsOrgIDAppsAppIDEnvsEnvIDRulesRuleIDRequest, base_url, '/orgs/{orgId}/apps/{appId}/envs/{envId}/rules/{ruleId}', request)
         headers = {}
+        headers['Accept'] = '*/*'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -50,6 +51,7 @@ class AutomationRule:
         
         url = utils.generate_url(operations.GetOrgsOrgIDAppsAppIDEnvsEnvIDRulesRequest, base_url, '/orgs/{orgId}/apps/{appId}/envs/{envId}/rules', request)
         headers = {}
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -75,6 +77,7 @@ class AutomationRule:
         
         url = utils.generate_url(operations.GetOrgsOrgIDAppsAppIDEnvsEnvIDRulesRuleIDRequest, base_url, '/orgs/{orgId}/apps/{appId}/envs/{envId}/rules/{ruleId}', request)
         headers = {}
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -107,6 +110,7 @@ class AutomationRule:
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -143,6 +147,7 @@ class AutomationRule:
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client

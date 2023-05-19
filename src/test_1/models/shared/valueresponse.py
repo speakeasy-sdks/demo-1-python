@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import dateutil.parser
-from ..shared import valuesource_enum as shared_valuesource_enum
+from ..shared import valuesource as shared_valuesource
 from dataclasses_json import Undefined, dataclass_json
 from datetime import datetime
 from marshmallow import fields
@@ -31,7 +31,7 @@ class ValueResponse:
     r"""Location of the secret value in the secret store."""
     secret_version: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('secret_version') }})
     r"""Version of the current secret value as returned by the secret store."""
-    source: shared_valuesource_enum.ValueSourceEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('source') }})
+    source: shared_valuesource.ValueSource = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('source') }})
     r"""Source of the value, \\"app\\" for app level, \\"env\\" for app env level."""
     updated_at: datetime = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('updated_at'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
     value: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('value') }})

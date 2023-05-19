@@ -249,12 +249,12 @@ src/test_1/models/shared/rolerequest.py
 src/test_1/models/shared/userrolerequest.py
 src/test_1/models/shared/userinviterequestrequest.py
 src/test_1/models/shared/valueresponse.py
-src/test_1/models/shared/valuesource_enum.py
+src/test_1/models/shared/valuesource.py
 src/test_1/models/shared/valuepatchpayloadrequest.py
 src/test_1/models/shared/valuecreatepayloadrequest.py
 src/test_1/models/shared/valueeditpayloadrequest.py
 src/test_1/models/shared/valuesetversionresponse.py
-src/test_1/models/shared/valuesetversionresultof_enum.py
+src/test_1/models/shared/valuesetversionresultof.py
 src/test_1/models/shared/jsonpatchresponse.py
 src/test_1/models/shared/valuesetactionpayloadrequest.py
 src/test_1/models/shared/workloadprofileresponse.py

@@ -34,6 +34,7 @@ class ArtefactVersion:
         url = utils.generate_url(operations.GetOrgsOrgIDArtefactVersionsRequest, base_url, '/orgs/{orgId}/artefact-versions', request)
         headers = {}
         query_params = utils.get_query_params(operations.GetOrgsOrgIDArtefactVersionsRequest, request)
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -63,6 +64,7 @@ class ArtefactVersion:
         
         url = utils.generate_url(operations.GetOrgsOrgIDArtefactVersionsArtefactVersionIDRequest, base_url, '/orgs/{orgId}/artefact-versions/{artefactVersionId}', request)
         headers = {}
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -93,6 +95,7 @@ class ArtefactVersion:
         url = utils.generate_url(operations.GetOrgsOrgIDArtefactsArtefactIDVersionsRequest, base_url, '/orgs/{orgId}/artefacts/{artefactId}/versions', request)
         headers = {}
         query_params = utils.get_query_params(operations.GetOrgsOrgIDArtefactsArtefactIDVersionsRequest, request)
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -127,6 +130,7 @@ class ArtefactVersion:
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -160,6 +164,7 @@ class ArtefactVersion:
         if data is None and form is None:
             raise Exception('request body is required')
         query_params = utils.get_query_params(operations.PostOrgsOrgIDArtefactVersionsRequest, request)
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client

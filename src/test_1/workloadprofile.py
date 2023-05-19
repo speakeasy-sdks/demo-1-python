@@ -33,6 +33,7 @@ class WorkloadProfile:
         
         url = utils.generate_url(operations.DeleteOrgsOrgIDWorkloadProfilesProfileIDVersionsVersionRequest, base_url, '/orgs/{orgId}/workload-profiles/{profileId}/versions/{version}', request)
         headers = {}
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -62,6 +63,7 @@ class WorkloadProfile:
         
         url = utils.generate_url(operations.DeleteOrgsOrgIDWorkloadProfilesProfileQidRequest, base_url, '/orgs/{orgId}/workload-profiles/{profileQid}', request)
         headers = {}
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -87,6 +89,7 @@ class WorkloadProfile:
         
         url = utils.generate_url(operations.GetOrgsOrgIDWorkloadProfilesRequest, base_url, '/orgs/{orgId}/workload-profiles', request)
         headers = {}
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -110,6 +113,7 @@ class WorkloadProfile:
         
         url = utils.generate_url(operations.GetOrgsOrgIDWorkloadProfilesProfileQidRequest, base_url, '/orgs/{orgId}/workload-profiles/{profileQid}', request)
         headers = {}
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -138,6 +142,7 @@ class WorkloadProfile:
         url = utils.generate_url(operations.GetOrgsOrgIDWorkloadProfilesProfileQidVersionsRequest, base_url, '/orgs/{orgId}/workload-profiles/{profileQid}/versions', request)
         headers = {}
         query_params = utils.get_query_params(operations.GetOrgsOrgIDWorkloadProfilesProfileQidVersionsRequest, request)
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -170,6 +175,7 @@ class WorkloadProfile:
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -218,6 +224,7 @@ class WorkloadProfile:
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client

@@ -54,6 +54,7 @@ class MatchingCriteria:
         url = utils.generate_url(operations.DeleteOrgsOrgIDResourcesDefsDefIDCriteriaCriteriaIDRequest, base_url, '/orgs/{orgId}/resources/defs/{defId}/criteria/{criteriaId}', request)
         headers = {}
         query_params = utils.get_query_params(operations.DeleteOrgsOrgIDResourcesDefsDefIDCriteriaCriteriaIDRequest, request)
+        headers['Accept'] = 'application/json;q=1, application/json;q=0.7, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -103,6 +104,7 @@ class MatchingCriteria:
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client

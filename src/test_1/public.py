@@ -32,6 +32,7 @@ class Public:
         
         url = utils.generate_url(operations.DeleteOrgsOrgIDAppsAppIDRequest, base_url, '/orgs/{orgId}/apps/{appId}', request)
         headers = {}
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -63,6 +64,7 @@ class Public:
         
         url = utils.generate_url(operations.DeleteOrgsOrgIDAppsAppIDEnvsEnvIDRequest, base_url, '/orgs/{orgId}/apps/{appId}/envs/{envId}', request)
         headers = {}
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -88,6 +90,7 @@ class Public:
         
         url = utils.generate_url(operations.DeleteOrgsOrgIDAppsAppIDEnvsEnvIDResourcesTypeResIDRequest, base_url, '/orgs/{orgId}/apps/{appId}/envs/{envId}/resources/{type}/{resId}', request)
         headers = {}
+        headers['Accept'] = '*/*'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -107,6 +110,7 @@ class Public:
         
         url = utils.generate_url(operations.DeleteOrgsOrgIDAppsAppIDEnvsEnvIDRulesRuleIDRequest, base_url, '/orgs/{orgId}/apps/{appId}/envs/{envId}/rules/{ruleId}', request)
         headers = {}
+        headers['Accept'] = '*/*'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -128,6 +132,7 @@ class Public:
         
         url = utils.generate_url(operations.DeleteOrgsOrgIDAppsAppIDEnvsEnvIDValuesRequest, base_url, '/orgs/{orgId}/apps/{appId}/envs/{envId}/values', request)
         headers = {}
+        headers['Accept'] = '*/*'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -149,6 +154,7 @@ class Public:
         
         url = utils.generate_url(operations.DeleteOrgsOrgIDAppsAppIDEnvsEnvIDValuesKeyRequest, base_url, '/orgs/{orgId}/apps/{appId}/envs/{envId}/values/{key}', request)
         headers = {}
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -174,6 +180,7 @@ class Public:
         
         url = utils.generate_url(operations.DeleteOrgsOrgIDAppsAppIDJobsRequest, base_url, '/orgs/{orgId}/apps/{appId}/jobs', request)
         headers = {}
+        headers['Accept'] = '*/*'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -193,6 +200,7 @@ class Public:
         
         url = utils.generate_url(operations.DeleteOrgsOrgIDAppsAppIDUsersUserIDRequest, base_url, '/orgs/{orgId}/apps/{appId}/users/{userId}', request)
         headers = {}
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -220,6 +228,7 @@ class Public:
         
         url = utils.generate_url(operations.DeleteOrgsOrgIDAppsAppIDValuesRequest, base_url, '/orgs/{orgId}/apps/{appId}/values', request)
         headers = {}
+        headers['Accept'] = '*/*'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -241,6 +250,7 @@ class Public:
         
         url = utils.generate_url(operations.DeleteOrgsOrgIDAppsAppIDValuesKeyRequest, base_url, '/orgs/{orgId}/apps/{appId}/values/{key}', request)
         headers = {}
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -266,6 +276,7 @@ class Public:
         
         url = utils.generate_url(operations.DeleteOrgsOrgIDAppsAppIDWebhooksJobIDRequest, base_url, '/orgs/{orgId}/apps/{appId}/webhooks/{jobId}', request)
         headers = {}
+        headers['Accept'] = '*/*'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -287,6 +298,7 @@ class Public:
         
         url = utils.generate_url(operations.DeleteOrgsOrgIDArtefactsArtefactIDRequest, base_url, '/orgs/{orgId}/artefacts/{artefactId}', request)
         headers = {}
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -314,6 +326,7 @@ class Public:
         
         url = utils.generate_url(operations.DeleteOrgsOrgIDEnvTypesEnvTypeIDRequest, base_url, '/orgs/{orgId}/env-types/{envTypeId}', request)
         headers = {}
+        headers['Accept'] = 'application/json;q=1, application/json;q=0.7, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -345,6 +358,7 @@ class Public:
         
         url = utils.generate_url(operations.DeleteOrgsOrgIDEnvTypesEnvTypeUsersUserIDRequest, base_url, '/orgs/{orgId}/env-types/{envType}/users/{userId}', request)
         headers = {}
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -372,6 +386,7 @@ class Public:
         
         url = utils.generate_url(operations.DeleteOrgsOrgIDRegistriesRegIDRequest, base_url, '/orgs/{orgId}/registries/{regId}', request)
         headers = {}
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -406,6 +421,7 @@ class Public:
         url = utils.generate_url(operations.DeleteOrgsOrgIDResourcesDefsDefIDRequest, base_url, '/orgs/{orgId}/resources/defs/{defId}', request)
         headers = {}
         query_params = utils.get_query_params(operations.DeleteOrgsOrgIDResourcesDefsDefIDRequest, request)
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -442,6 +458,7 @@ class Public:
         url = utils.generate_url(operations.DeleteOrgsOrgIDResourcesDefsDefIDCriteriaCriteriaIDRequest, base_url, '/orgs/{orgId}/resources/defs/{defId}/criteria/{criteriaId}', request)
         headers = {}
         query_params = utils.get_query_params(operations.DeleteOrgsOrgIDResourcesDefsDefIDCriteriaCriteriaIDRequest, request)
+        headers['Accept'] = 'application/json;q=1, application/json;q=0.7, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -474,6 +491,7 @@ class Public:
         
         url = utils.generate_url(operations.DeleteOrgsOrgIDResourcesDriversDriverIDRequest, base_url, '/orgs/{orgId}/resources/drivers/{driverId}', request)
         headers = {}
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -499,6 +517,7 @@ class Public:
         
         url = utils.generate_url(operations.DeleteOrgsOrgIDUsersUserIDRequest, base_url, '/orgs/{orgId}/users/{userId}', request)
         headers = {}
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -524,6 +543,7 @@ class Public:
         
         url = utils.generate_url(operations.DeleteOrgsOrgIDWorkloadProfilesProfileIDVersionsVersionRequest, base_url, '/orgs/{orgId}/workload-profiles/{profileId}/versions/{version}', request)
         headers = {}
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -553,6 +573,7 @@ class Public:
         
         url = utils.generate_url(operations.DeleteOrgsOrgIDWorkloadProfilesProfileQidRequest, base_url, '/orgs/{orgId}/workload-profiles/{profileQid}', request)
         headers = {}
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -578,6 +599,7 @@ class Public:
         
         url = utils.generate_url(operations.DeleteTokensTokenIDRequest, base_url, '/tokens/{tokenId}', request)
         headers = {}
+        headers['Accept'] = '*/*'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -597,6 +619,7 @@ class Public:
         
         url = utils.generate_url(operations.GetDeltaRequest, base_url, '/orgs/{orgId}/apps/{appId}/deltas/{deltaId}', request)
         headers = {}
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -623,6 +646,7 @@ class Public:
         
         url = utils.generate_url(operations.GetSetsRequest, base_url, '/orgs/{orgId}/apps/{appId}/sets', request)
         headers = {}
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -649,6 +673,7 @@ class Public:
         
         url = base_url.removesuffix('/') + '/current-user'
         headers = {}
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -674,6 +699,7 @@ class Public:
         
         url = base_url.removesuffix('/') + '/orgs'
         headers = {}
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -699,6 +725,7 @@ class Public:
         
         url = utils.generate_url(operations.GetOrgsOrgIDRequest, base_url, '/orgs/{orgId}', request)
         headers = {}
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -730,6 +757,7 @@ class Public:
         
         url = utils.generate_url(operations.GetOrgsOrgIDAppsRequest, base_url, '/orgs/{orgId}/apps', request)
         headers = {}
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -755,6 +783,7 @@ class Public:
         
         url = utils.generate_url(operations.GetOrgsOrgIDAppsAppIDRequest, base_url, '/orgs/{orgId}/apps/{appId}', request)
         headers = {}
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -783,6 +812,7 @@ class Public:
         url = utils.generate_url(operations.GetOrgsOrgIDAppsAppIDDeltasRequest, base_url, '/orgs/{orgId}/apps/{appId}/deltas', request)
         headers = {}
         query_params = utils.get_query_params(operations.GetOrgsOrgIDAppsAppIDDeltasRequest, request)
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -808,6 +838,7 @@ class Public:
         
         url = utils.generate_url(operations.GetOrgsOrgIDAppsAppIDEnvsRequest, base_url, '/orgs/{orgId}/apps/{appId}/envs', request)
         headers = {}
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -833,6 +864,7 @@ class Public:
         
         url = utils.generate_url(operations.GetOrgsOrgIDAppsAppIDEnvsEnvIDRequest, base_url, '/orgs/{orgId}/apps/{appId}/envs/{envId}', request)
         headers = {}
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -862,6 +894,7 @@ class Public:
         
         url = utils.generate_url(operations.GetOrgsOrgIDAppsAppIDEnvsEnvIDDeploysRequest, base_url, '/orgs/{orgId}/apps/{appId}/envs/{envId}/deploys', request)
         headers = {}
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -891,6 +924,7 @@ class Public:
         
         url = utils.generate_url(operations.GetOrgsOrgIDAppsAppIDEnvsEnvIDDeploysDeployIDRequest, base_url, '/orgs/{orgId}/apps/{appId}/envs/{envId}/deploys/{deployId}', request)
         headers = {}
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -918,6 +952,7 @@ class Public:
         
         url = utils.generate_url(operations.GetOrgsOrgIDAppsAppIDEnvsEnvIDDeploysDeployIDErrorsRequest, base_url, '/orgs/{orgId}/apps/{appId}/envs/{envId}/deploys/{deployId}/errors', request)
         headers = {}
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -941,6 +976,7 @@ class Public:
         
         url = utils.generate_url(operations.GetOrgsOrgIDAppsAppIDEnvsEnvIDResourcesRequest, base_url, '/orgs/{orgId}/apps/{appId}/envs/{envId}/resources', request)
         headers = {}
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -968,6 +1004,7 @@ class Public:
         
         url = utils.generate_url(operations.GetOrgsOrgIDAppsAppIDEnvsEnvIDRulesRequest, base_url, '/orgs/{orgId}/apps/{appId}/envs/{envId}/rules', request)
         headers = {}
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -993,6 +1030,7 @@ class Public:
         
         url = utils.generate_url(operations.GetOrgsOrgIDAppsAppIDEnvsEnvIDRulesRuleIDRequest, base_url, '/orgs/{orgId}/apps/{appId}/envs/{envId}/rules/{ruleId}', request)
         headers = {}
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -1018,6 +1056,7 @@ class Public:
         
         url = utils.generate_url(operations.GetOrgsOrgIDAppsAppIDEnvsEnvIDRuntimeRequest, base_url, '/orgs/{orgId}/apps/{appId}/envs/{envId}/runtime', request)
         headers = {}
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -1046,6 +1085,7 @@ class Public:
         url = utils.generate_url(operations.GetOrgsOrgIDAppsAppIDEnvsEnvIDValueSetVersionsRequest, base_url, '/orgs/{orgId}/apps/{appId}/envs/{envId}/value-set-versions', request)
         headers = {}
         query_params = utils.get_query_params(operations.GetOrgsOrgIDAppsAppIDEnvsEnvIDValueSetVersionsRequest, request)
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -1069,6 +1109,7 @@ class Public:
         
         url = utils.generate_url(operations.GetOrgsOrgIDAppsAppIDEnvsEnvIDValueSetVersionsValueSetVersionIDRequest, base_url, '/orgs/{orgId}/apps/{appId}/envs/{envId}/value-set-versions/{valueSetVersionId}', request)
         headers = {}
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -1098,6 +1139,7 @@ class Public:
         
         url = utils.generate_url(operations.GetOrgsOrgIDAppsAppIDEnvsEnvIDValuesRequest, base_url, '/orgs/{orgId}/apps/{appId}/envs/{envId}/values', request)
         headers = {}
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -1122,6 +1164,7 @@ class Public:
         url = utils.generate_url(operations.GetOrgsOrgIDAppsAppIDRuntimeRequest, base_url, '/orgs/{orgId}/apps/{appId}/runtime', request)
         headers = {}
         query_params = utils.get_query_params(operations.GetOrgsOrgIDAppsAppIDRuntimeRequest, request)
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -1148,6 +1191,7 @@ class Public:
         url = utils.generate_url(operations.GetOrgsOrgIDAppsAppIDSetsSetIDRequest, base_url, '/orgs/{orgId}/apps/{appId}/sets/{setId}', request)
         headers = {}
         query_params = utils.get_query_params(operations.GetOrgsOrgIDAppsAppIDSetsSetIDRequest, request)
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -1174,6 +1218,7 @@ class Public:
         
         url = utils.generate_url(operations.GetOrgsOrgIDAppsAppIDSetsSetIDDiffSourceSetIDRequest, base_url, '/orgs/{orgId}/apps/{appId}/sets/{setId}/diff/{sourceSetId}', request)
         headers = {}
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -1200,6 +1245,7 @@ class Public:
         
         url = utils.generate_url(operations.GetOrgsOrgIDAppsAppIDUsersRequest, base_url, '/orgs/{orgId}/apps/{appId}/users', request)
         headers = {}
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -1225,6 +1271,7 @@ class Public:
         
         url = utils.generate_url(operations.GetOrgsOrgIDAppsAppIDUsersUserIDRequest, base_url, '/orgs/{orgId}/apps/{appId}/users/{userId}', request)
         headers = {}
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -1257,6 +1304,7 @@ class Public:
         url = utils.generate_url(operations.GetOrgsOrgIDAppsAppIDValueSetVersionsRequest, base_url, '/orgs/{orgId}/apps/{appId}/value-set-versions', request)
         headers = {}
         query_params = utils.get_query_params(operations.GetOrgsOrgIDAppsAppIDValueSetVersionsRequest, request)
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -1280,6 +1328,7 @@ class Public:
         
         url = utils.generate_url(operations.GetOrgsOrgIDAppsAppIDValueSetVersionsValueSetVersionIDRequest, base_url, '/orgs/{orgId}/apps/{appId}/value-set-versions/{valueSetVersionId}', request)
         headers = {}
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -1309,6 +1358,7 @@ class Public:
         
         url = utils.generate_url(operations.GetOrgsOrgIDAppsAppIDValuesRequest, base_url, '/orgs/{orgId}/apps/{appId}/values', request)
         headers = {}
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -1332,6 +1382,7 @@ class Public:
         
         url = utils.generate_url(operations.GetOrgsOrgIDAppsAppIDWebhooksRequest, base_url, '/orgs/{orgId}/apps/{appId}/webhooks', request)
         headers = {}
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -1355,6 +1406,7 @@ class Public:
         
         url = utils.generate_url(operations.GetOrgsOrgIDAppsAppIDWebhooksJobIDRequest, base_url, '/orgs/{orgId}/apps/{appId}/webhooks/{jobId}', request)
         headers = {}
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -1383,6 +1435,7 @@ class Public:
         url = utils.generate_url(operations.GetOrgsOrgIDArtefactVersionsRequest, base_url, '/orgs/{orgId}/artefact-versions', request)
         headers = {}
         query_params = utils.get_query_params(operations.GetOrgsOrgIDArtefactVersionsRequest, request)
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -1412,6 +1465,7 @@ class Public:
         
         url = utils.generate_url(operations.GetOrgsOrgIDArtefactVersionsArtefactVersionIDRequest, base_url, '/orgs/{orgId}/artefact-versions/{artefactVersionId}', request)
         headers = {}
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -1442,6 +1496,7 @@ class Public:
         url = utils.generate_url(operations.GetOrgsOrgIDArtefactsRequest, base_url, '/orgs/{orgId}/artefacts', request)
         headers = {}
         query_params = utils.get_query_params(operations.GetOrgsOrgIDArtefactsRequest, request)
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -1468,6 +1523,7 @@ class Public:
         url = utils.generate_url(operations.GetOrgsOrgIDArtefactsArtefactIDVersionsRequest, base_url, '/orgs/{orgId}/artefacts/{artefactId}/versions', request)
         headers = {}
         query_params = utils.get_query_params(operations.GetOrgsOrgIDArtefactsArtefactIDVersionsRequest, request)
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -1497,6 +1553,7 @@ class Public:
         
         url = utils.generate_url(operations.GetOrgsOrgIDEnvTypesRequest, base_url, '/orgs/{orgId}/env-types', request)
         headers = {}
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -1522,6 +1579,7 @@ class Public:
         
         url = utils.generate_url(operations.GetOrgsOrgIDEnvTypesEnvTypeIDRequest, base_url, '/orgs/{orgId}/env-types/{envTypeId}', request)
         headers = {}
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -1549,6 +1607,7 @@ class Public:
         
         url = utils.generate_url(operations.GetOrgsOrgIDEnvTypesEnvTypeUsersUserIDRequest, base_url, '/orgs/{orgId}/env-types/{envType}/users/{userId}', request)
         headers = {}
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -1578,6 +1637,7 @@ class Public:
         
         url = utils.generate_url(operations.GetOrgsOrgIDEventsRequest, base_url, '/orgs/{orgId}/events', request)
         headers = {}
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -1605,6 +1665,7 @@ class Public:
         
         url = utils.generate_url(operations.GetOrgsOrgIDImagesRequest, base_url, '/orgs/{orgId}/images', request)
         headers = {}
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -1634,6 +1695,7 @@ class Public:
         
         url = utils.generate_url(operations.GetOrgsOrgIDImagesImageIDRequest, base_url, '/orgs/{orgId}/images/{imageId}', request)
         headers = {}
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -1665,6 +1727,7 @@ class Public:
         
         url = utils.generate_url(operations.GetOrgsOrgIDImagesImageIDBuildsRequest, base_url, '/orgs/{orgId}/images/{imageId}/builds', request)
         headers = {}
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -1692,6 +1755,7 @@ class Public:
         
         url = utils.generate_url(operations.GetOrgsOrgIDInvitationsRequest, base_url, '/orgs/{orgId}/invitations', request)
         headers = {}
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -1715,6 +1779,7 @@ class Public:
         
         url = utils.generate_url(operations.GetOrgsOrgIDRegistriesRequest, base_url, '/orgs/{orgId}/registries', request)
         headers = {}
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -1742,6 +1807,7 @@ class Public:
         
         url = utils.generate_url(operations.GetOrgsOrgIDRegistriesRegIDRequest, base_url, '/orgs/{orgId}/registries/{regId}', request)
         headers = {}
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -1769,6 +1835,7 @@ class Public:
         
         url = utils.generate_url(operations.GetOrgsOrgIDRegistriesRegIDCredsRequest, base_url, '/orgs/{orgId}/registries/{regId}/creds', request)
         headers = {}
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -1796,6 +1863,7 @@ class Public:
         
         url = utils.generate_url(operations.GetOrgsOrgIDResourcesAccountTypesRequest, base_url, '/orgs/{orgId}/resources/account-types', request)
         headers = {}
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -1823,6 +1891,7 @@ class Public:
         
         url = utils.generate_url(operations.GetOrgsOrgIDResourcesAccountsRequest, base_url, '/orgs/{orgId}/resources/accounts', request)
         headers = {}
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -1850,6 +1919,7 @@ class Public:
         
         url = utils.generate_url(operations.GetOrgsOrgIDResourcesAccountsAccIDRequest, base_url, '/orgs/{orgId}/resources/accounts/{accId}', request)
         headers = {}
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -1880,6 +1950,7 @@ class Public:
         url = utils.generate_url(operations.GetOrgsOrgIDResourcesDefsRequest, base_url, '/orgs/{orgId}/resources/defs', request)
         headers = {}
         query_params = utils.get_query_params(operations.GetOrgsOrgIDResourcesDefsRequest, request)
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -1907,6 +1978,7 @@ class Public:
         
         url = utils.generate_url(operations.GetOrgsOrgIDResourcesDefsDefIDRequest, base_url, '/orgs/{orgId}/resources/defs/{defId}', request)
         headers = {}
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -1934,6 +2006,7 @@ class Public:
         
         url = utils.generate_url(operations.GetOrgsOrgIDResourcesDefsDefIDResourcesRequest, base_url, '/orgs/{orgId}/resources/defs/{defId}/resources', request)
         headers = {}
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -1961,6 +2034,7 @@ class Public:
         
         url = utils.generate_url(operations.GetOrgsOrgIDResourcesDriversRequest, base_url, '/orgs/{orgId}/resources/drivers', request)
         headers = {}
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -1990,6 +2064,7 @@ class Public:
         
         url = utils.generate_url(operations.GetOrgsOrgIDResourcesDriversDriverIDRequest, base_url, '/orgs/{orgId}/resources/drivers/{driverId}', request)
         headers = {}
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -2017,6 +2092,7 @@ class Public:
         
         url = utils.generate_url(operations.GetOrgsOrgIDResourcesTypesRequest, base_url, '/orgs/{orgId}/resources/types', request)
         headers = {}
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -2044,6 +2120,7 @@ class Public:
         
         url = utils.generate_url(operations.GetOrgsOrgIDUsersRequest, base_url, '/orgs/{orgId}/users', request)
         headers = {}
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -2069,6 +2146,7 @@ class Public:
         
         url = utils.generate_url(operations.GetOrgsOrgIDUsersUserIDRequest, base_url, '/orgs/{orgId}/users/{userId}', request)
         headers = {}
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -2098,6 +2176,7 @@ class Public:
         
         url = utils.generate_url(operations.GetOrgsOrgIDWorkloadProfilesRequest, base_url, '/orgs/{orgId}/workload-profiles', request)
         headers = {}
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -2121,6 +2200,7 @@ class Public:
         
         url = utils.generate_url(operations.GetOrgsOrgIDWorkloadProfilesProfileQidRequest, base_url, '/orgs/{orgId}/workload-profiles/{profileQid}', request)
         headers = {}
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -2149,6 +2229,7 @@ class Public:
         url = utils.generate_url(operations.GetOrgsOrgIDWorkloadProfilesProfileQidVersionsRequest, base_url, '/orgs/{orgId}/workload-profiles/{profileQid}/versions', request)
         headers = {}
         query_params = utils.get_query_params(operations.GetOrgsOrgIDWorkloadProfilesProfileQidVersionsRequest, request)
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -2176,6 +2257,7 @@ class Public:
         
         url = base_url.removesuffix('/') + '/tokens'
         headers = {}
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -2199,6 +2281,7 @@ class Public:
         
         url = base_url.removesuffix('/') + '/users/me'
         headers = {}
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -2229,6 +2312,7 @@ class Public:
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -2263,6 +2347,7 @@ class Public:
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['Accept'] = 'application/json;q=1, application/json;q=0.7, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -2298,6 +2383,7 @@ class Public:
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['Accept'] = '*/*'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -2324,6 +2410,7 @@ class Public:
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -2356,6 +2443,7 @@ class Public:
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -2392,6 +2480,7 @@ class Public:
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -2426,6 +2515,7 @@ class Public:
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -2458,6 +2548,7 @@ class Public:
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -2492,6 +2583,7 @@ class Public:
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -2524,6 +2616,7 @@ class Public:
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -2556,6 +2649,7 @@ class Public:
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -2588,6 +2682,7 @@ class Public:
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -2624,6 +2719,7 @@ class Public:
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -2656,6 +2752,7 @@ class Public:
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -2694,6 +2791,7 @@ class Public:
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -2736,6 +2834,7 @@ class Public:
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -2770,6 +2869,7 @@ class Public:
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -2809,6 +2909,7 @@ class Public:
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -2843,6 +2944,7 @@ class Public:
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -2879,6 +2981,7 @@ class Public:
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -2915,6 +3018,7 @@ class Public:
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -2947,6 +3051,7 @@ class Public:
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['Accept'] = 'application/json;q=1, application/json;q=0.7, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -2981,6 +3086,7 @@ class Public:
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -3020,6 +3126,7 @@ class Public:
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -3054,6 +3161,7 @@ class Public:
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -3090,6 +3198,7 @@ class Public:
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -3126,6 +3235,7 @@ class Public:
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -3158,6 +3268,7 @@ class Public:
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -3192,6 +3303,7 @@ class Public:
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -3223,6 +3335,7 @@ class Public:
         if data is None and form is None:
             raise Exception('request body is required')
         query_params = utils.get_query_params(operations.PostOrgsOrgIDArtefactVersionsRequest, request)
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -3257,6 +3370,7 @@ class Public:
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -3289,6 +3403,7 @@ class Public:
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -3329,6 +3444,7 @@ class Public:
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -3359,6 +3475,7 @@ class Public:
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -3393,6 +3510,7 @@ class Public:
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -3425,6 +3543,7 @@ class Public:
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -3457,6 +3576,7 @@ class Public:
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -3501,6 +3621,7 @@ class Public:
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -3533,6 +3654,7 @@ class Public:
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -3565,6 +3687,7 @@ class Public:
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -3599,6 +3722,7 @@ class Public:
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -3647,6 +3771,7 @@ class Public:
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -3679,6 +3804,7 @@ class Public:
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -3714,6 +3840,7 @@ class Public:
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -3747,6 +3874,7 @@ class Public:
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -3780,6 +3908,7 @@ class Public:
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -3823,6 +3952,7 @@ class Public:
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -3855,6 +3985,7 @@ class Public:
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -3900,6 +4031,7 @@ class Public:
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['Accept'] = '*/*'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -3926,6 +4058,7 @@ class Public:
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -3960,6 +4093,7 @@ class Public:
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -3992,6 +4126,7 @@ class Public:
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -4024,6 +4159,7 @@ class Public:
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client

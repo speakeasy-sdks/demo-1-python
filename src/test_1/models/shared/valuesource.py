@@ -3,7 +3,7 @@
 from __future__ import annotations
 from enum import Enum
 
-class ValueSourceEnum(str, Enum):
+class ValueSource(str, Enum):
     r"""Source of the value, \\"app\\" for app level, \\"env\\" for app env level."""
     APP = 'app'
     ENV = 'env'

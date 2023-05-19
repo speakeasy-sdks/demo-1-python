@@ -37,6 +37,7 @@ class Application:
         
         url = utils.generate_url(operations.DeleteOrgsOrgIDAppsAppIDRequest, base_url, '/orgs/{orgId}/apps/{appId}', request)
         headers = {}
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -64,6 +65,7 @@ class Application:
         
         url = utils.generate_url(operations.GetOrgsOrgIDAppsRequest, base_url, '/orgs/{orgId}/apps', request)
         headers = {}
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -89,6 +91,7 @@ class Application:
         
         url = utils.generate_url(operations.GetOrgsOrgIDAppsAppIDRequest, base_url, '/orgs/{orgId}/apps/{appId}', request)
         headers = {}
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -123,6 +126,7 @@ class Application:
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client

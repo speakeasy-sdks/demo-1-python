@@ -3,7 +3,7 @@
 from __future__ import annotations
 from enum import Enum
 
-class ValueSetVersionResultOfEnum(str, Enum):
+class ValueSetVersionResultOf(str, Enum):
     APP_VALUE_CREATE = 'app_value_create'
     APP_VALUE_UPDATE = 'app_value_update'
     APP_VALUE_DELETE = 'app_value_delete'

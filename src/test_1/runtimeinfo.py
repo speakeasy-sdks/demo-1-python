@@ -31,6 +31,7 @@ class RuntimeInfo:
         
         url = utils.generate_url(operations.GetOrgsOrgIDAppsAppIDEnvsEnvIDRuntimeRequest, base_url, '/orgs/{orgId}/apps/{appId}/envs/{envId}/runtime', request)
         headers = {}
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -57,6 +58,7 @@ class RuntimeInfo:
         url = utils.generate_url(operations.GetOrgsOrgIDAppsAppIDRuntimeRequest, base_url, '/orgs/{orgId}/apps/{appId}/runtime', request)
         headers = {}
         query_params = utils.get_query_params(operations.GetOrgsOrgIDAppsAppIDRuntimeRequest, request)
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -87,6 +89,7 @@ class RuntimeInfo:
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['Accept'] = '*/*'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -122,6 +125,7 @@ class RuntimeInfo:
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['Accept'] = '*/*'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
