@@ -27,6 +27,7 @@ src/test_1/valuesetversion.py
 src/test_1/workloadprofile.py
 src/test_1/public.py
 src/test_1/sdk.py
+.gitignore
 pylintrc
 setup.py
 src/test_1/__init__.py
