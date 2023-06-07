@@ -2,7 +2,7 @@
 
 ## Overview
 
-# Introduction
+Humanitec API: # Introduction
 The *Humanitec API* allows you to automate and integrate Humanitec into your developer and operational workflows.
 The API is a REST based API. It is based around a set of concepts:
 

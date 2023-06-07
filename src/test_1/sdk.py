@@ -33,7 +33,7 @@ from .workloadprofile import WorkloadProfile
 from test_1 import utils
 
 class Test1:
-    r"""# Introduction
+    r"""Humanitec API: # Introduction
     The *Humanitec API* allows you to automate and integrate Humanitec into your developer and operational workflows.
     The API is a REST based API. It is based around a set of concepts:
     
