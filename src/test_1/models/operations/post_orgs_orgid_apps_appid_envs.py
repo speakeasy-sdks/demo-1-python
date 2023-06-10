@@ -9,9 +9,9 @@ from ..shared import humanitecerrorresponse as shared_humanitecerrorresponse
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class PostOrgsOrgIDAppsAppIDEnvsRequest:
-    
     app_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'appId', 'style': 'simple', 'explode': False }})
     r"""The Application ID."""
     environment_definition_request: shared_environmentdefinitionrequest.EnvironmentDefinitionRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
@@ -20,9 +20,11 @@ class PostOrgsOrgIDAppsAppIDEnvsRequest:
     r"""The Organization ID."""
     
 
+
+
+
 @dataclasses.dataclass
 class PostOrgsOrgIDAppsAppIDEnvsResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     environment_response: Optional[shared_environmentresponse.EnvironmentResponse] = dataclasses.field(default=None)
@@ -31,3 +33,4 @@ class PostOrgsOrgIDAppsAppIDEnvsResponse:
     r"""The supplied `id` is an invalid ID or a required field is missing."""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     
+

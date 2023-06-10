@@ -7,18 +7,20 @@ from ..shared import setresponse as shared_setresponse
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class GetSetsRequest:
-    
     app_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'appId', 'style': 'simple', 'explode': False }})
     r"""The Application ID."""
     org_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'orgId', 'style': 'simple', 'explode': False }})
     r"""The Organization ID."""
     
 
+
+
+
 @dataclasses.dataclass
 class GetSetsResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     get_sets_404_application_json_string: Optional[str] = dataclasses.field(default=None)
@@ -27,3 +29,4 @@ class GetSetsResponse:
     set_responses: Optional[list[shared_setresponse.SetResponse]] = dataclasses.field(default=None)
     r"""The Requested Deployment Set."""
     
+

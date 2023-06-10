@@ -11,6 +11,7 @@ from test_1 import utils
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class ValueResponse:
     r"""Shared Values can be used to manage variables and configuration that might vary between environments. They are also the way that secrets can be stored securely.
@@ -19,7 +20,6 @@ class ValueResponse:
     
     For example: There might be 2 API keys that are used in an application. One development key used in the development and staging environments and another used for production. The development API key would be set at the Application level. The value would then be overridden at the Environment level for the production Environment.
     """
-    
     created_at: datetime = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('created_at'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
     description: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('description') }})
     r"""A Human friendly description of what the Shared Value is."""
@@ -37,3 +37,4 @@ class ValueResponse:
     value: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('value') }})
     r"""The value that will be stored. (Will be always empty for secrets.)"""
     
+

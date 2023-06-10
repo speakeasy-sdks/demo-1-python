@@ -9,17 +9,19 @@ from ..shared import resourceaccountresponse as shared_resourceaccountresponse
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class PostOrgsOrgIDResourcesAccountsRequest:
-    
     create_resource_account_request_request: shared_createresourceaccountrequestrequest.CreateResourceAccountRequestRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     org_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'orgId', 'style': 'simple', 'explode': False }})
     r"""The Organization ID."""
     
 
+
+
+
 @dataclasses.dataclass
 class PostOrgsOrgIDResourcesAccountsResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     humanitec_error_response: Optional[shared_humanitecerrorresponse.HumanitecErrorResponse] = dataclasses.field(default=None)
@@ -28,3 +30,4 @@ class PostOrgsOrgIDResourcesAccountsResponse:
     resource_account_response: Optional[shared_resourceaccountresponse.ResourceAccountResponse] = dataclasses.field(default=None)
     r"""The newly created Resources Account details."""
     
+

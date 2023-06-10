@@ -7,19 +7,22 @@ from ..shared import userroleresponse as shared_userroleresponse
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class GetOrgsOrgIDUsersRequest:
-    
     org_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'orgId', 'style': 'simple', 'explode': False }})
     r"""The Organization ID."""
     
 
+
+
+
 @dataclasses.dataclass
 class GetOrgsOrgIDUsersResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     user_role_responses: Optional[list[shared_userroleresponse.UserRoleResponse]] = dataclasses.field(default=None)
     r"""A list of Users and the roles they hold."""
     
+

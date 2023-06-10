@@ -8,9 +8,9 @@ from ..shared import resourcedefinitionresponse as shared_resourcedefinitionresp
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class GetOrgsOrgIDResourcesDefsRequest:
-    
     org_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'orgId', 'style': 'simple', 'explode': False }})
     r"""The Organization ID."""
     app: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'app', 'style': 'form', 'explode': True }})
@@ -25,9 +25,11 @@ class GetOrgsOrgIDResourcesDefsRequest:
     r"""(Optional) Filter Resource Definitions that may match a specific Resource Type."""
     
 
+
+
+
 @dataclasses.dataclass
 class GetOrgsOrgIDResourcesDefsResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     humanitec_error_response: Optional[shared_humanitecerrorresponse.HumanitecErrorResponse] = dataclasses.field(default=None)
@@ -36,3 +38,4 @@ class GetOrgsOrgIDResourcesDefsResponse:
     resource_definition_responses: Optional[list[shared_resourcedefinitionresponse.ResourceDefinitionResponse]] = dataclasses.field(default=None)
     r"""A possibly empty list of Resources Definitions."""
     
+

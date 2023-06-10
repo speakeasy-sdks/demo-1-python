@@ -8,9 +8,9 @@ from ..shared import workloadprofileversionresponse as shared_workloadprofilever
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class GetOrgsOrgIDWorkloadProfilesProfileQidVersionsRequest:
-    
     org_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'orgId', 'style': 'simple', 'explode': False }})
     r"""The Organization ID."""
     profile_qid: str = dataclasses.field(metadata={'path_param': { 'field_name': 'profileQid', 'style': 'simple', 'explode': False }})
@@ -19,9 +19,11 @@ class GetOrgsOrgIDWorkloadProfilesProfileQidVersionsRequest:
     r"""Optional query parameter, defines version constraint pattern (https://github.com/Masterminds/semver#checking-version-constraints)."""
     
 
+
+
+
 @dataclasses.dataclass
 class GetOrgsOrgIDWorkloadProfilesProfileQidVersionsResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     humanitec_error_response: Optional[shared_humanitecerrorresponse.HumanitecErrorResponse] = dataclasses.field(default=None)
@@ -30,3 +32,4 @@ class GetOrgsOrgIDWorkloadProfilesProfileQidVersionsResponse:
     workload_profile_version_responses: Optional[list[shared_workloadprofileversionresponse.WorkloadProfileVersionResponse]] = dataclasses.field(default=None)
     r"""A possibly empty list of Workload Profile Versions."""
     
+

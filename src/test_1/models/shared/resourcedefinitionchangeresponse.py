@@ -7,10 +7,10 @@ from test_1 import utils
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class ResourceDefinitionChangeResponse:
     r"""ResourceDefinitionChange describes the effects of a Resource Definition or Matching Criteria update/deletion."""
-    
     app_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('app_id') }})
     r"""The ID of the App the resource is associated with."""
     env_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('env_id') }})
@@ -22,3 +22,4 @@ class ResourceDefinitionChangeResponse:
     to_def: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('to_def') }})
     r"""The Resource Definition that resource *will be* provisioned from if the change is applied."""
     
+

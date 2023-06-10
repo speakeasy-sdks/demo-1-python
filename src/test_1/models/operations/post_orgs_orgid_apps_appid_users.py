@@ -9,9 +9,9 @@ from ..shared import userroleresponse as shared_userroleresponse
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class PostOrgsOrgIDAppsAppIDUsersRequest:
-    
     app_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'appId', 'style': 'simple', 'explode': False }})
     r"""The Application ID."""
     org_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'orgId', 'style': 'simple', 'explode': False }})
@@ -20,9 +20,11 @@ class PostOrgsOrgIDAppsAppIDUsersRequest:
     r"""The user ID and the role"""
     
 
+
+
+
 @dataclasses.dataclass
 class PostOrgsOrgIDAppsAppIDUsersResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     humanitec_error_response: Optional[shared_humanitecerrorresponse.HumanitecErrorResponse] = dataclasses.field(default=None)
@@ -31,3 +33,4 @@ class PostOrgsOrgIDAppsAppIDUsersResponse:
     user_role_response: Optional[shared_userroleresponse.UserRoleResponse] = dataclasses.field(default=None)
     r"""The user ID and associated role."""
     
+

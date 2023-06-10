@@ -8,9 +8,9 @@ from ..shared import humanitecerrorresponse as shared_humanitecerrorresponse
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class GetOrgsOrgIDAppsAppIDEnvsEnvIDRequest:
-    
     app_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'appId', 'style': 'simple', 'explode': False }})
     r"""The Application ID."""
     env_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'envId', 'style': 'simple', 'explode': False }})
@@ -19,9 +19,11 @@ class GetOrgsOrgIDAppsAppIDEnvsEnvIDRequest:
     r"""The Organization ID."""
     
 
+
+
+
 @dataclasses.dataclass
 class GetOrgsOrgIDAppsAppIDEnvsEnvIDResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     environment_response: Optional[shared_environmentresponse.EnvironmentResponse] = dataclasses.field(default=None)
@@ -30,3 +32,4 @@ class GetOrgsOrgIDAppsAppIDEnvsEnvIDResponse:
     r"""No Environment with `id` in Application."""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     
+

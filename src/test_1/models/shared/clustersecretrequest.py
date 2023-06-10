@@ -7,12 +7,13 @@ from test_1 import utils
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class ClusterSecretRequest:
     r"""ClusterSecret represents Kubernetes secret reference."""
-    
     namespace: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('namespace') }})
     r"""Namespace to look for the Kubernetes secret definition in."""
     secret: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('secret') }})
     r"""Name that identifies the Kubernetes secret."""
     
+

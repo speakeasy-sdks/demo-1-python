@@ -9,18 +9,20 @@ from ..shared import humanitecerrorresponse as shared_humanitecerrorresponse
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class PostOrgsOrgIDEnvTypesRequest:
-    
     environment_type_request: shared_environmenttyperequest.EnvironmentTypeRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     r"""New Environment Type."""
     org_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'orgId', 'style': 'simple', 'explode': False }})
     r"""The Organization ID."""
     
 
+
+
+
 @dataclasses.dataclass
 class PostOrgsOrgIDEnvTypesResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     environment_type_response: Optional[shared_environmenttyperesponse.EnvironmentTypeResponse] = dataclasses.field(default=None)
@@ -29,3 +31,4 @@ class PostOrgsOrgIDEnvTypesResponse:
     r"""The supplied `id` is not a valid ID or a required field is missing."""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     
+

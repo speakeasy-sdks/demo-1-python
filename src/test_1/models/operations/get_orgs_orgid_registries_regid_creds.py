@@ -8,18 +8,20 @@ from ..shared import registrycredsresponse as shared_registrycredsresponse
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class GetOrgsOrgIDRegistriesRegIDCredsRequest:
-    
     org_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'orgId', 'style': 'simple', 'explode': False }})
     r"""Unique (alpha-numerical) organization identifier."""
     reg_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'regId', 'style': 'simple', 'explode': False }})
     r"""Unique (alpha-numerical) registry identifier."""
     
 
+
+
+
 @dataclasses.dataclass
 class GetOrgsOrgIDRegistriesRegIDCredsResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     error_info_response: Optional[shared_errorinforesponse.ErrorInfoResponse] = dataclasses.field(default=None)
@@ -28,3 +30,4 @@ class GetOrgsOrgIDRegistriesRegIDCredsResponse:
     registry_creds_response: Optional[shared_registrycredsresponse.RegistryCredsResponse] = dataclasses.field(default=None)
     r"""Current account credentials or secret details for the registry."""
     
+

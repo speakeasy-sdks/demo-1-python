@@ -8,18 +8,20 @@ from ..shared import humanitecerrorresponse as shared_humanitecerrorresponse
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class GetOrgsOrgIDAppsAppIDRequest:
-    
     app_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'appId', 'style': 'simple', 'explode': False }})
     r"""The Application ID."""
     org_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'orgId', 'style': 'simple', 'explode': False }})
     r"""The Organization ID."""
     
 
+
+
+
 @dataclasses.dataclass
 class GetOrgsOrgIDAppsAppIDResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     application_response: Optional[shared_applicationresponse.ApplicationResponse] = dataclasses.field(default=None)
@@ -28,3 +30,4 @@ class GetOrgsOrgIDAppsAppIDResponse:
     r"""No Application with ID `appId` in Organization."""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     
+

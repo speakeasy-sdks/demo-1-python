@@ -9,9 +9,9 @@ from ..shared import webhookresponse as shared_webhookresponse
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class PostOrgsOrgIDAppsAppIDWebhooksRequest:
-    
     app_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'appId', 'style': 'simple', 'explode': False }})
     r"""The Application ID."""
     org_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'orgId', 'style': 'simple', 'explode': False }})
@@ -19,9 +19,11 @@ class PostOrgsOrgIDAppsAppIDWebhooksRequest:
     webhook_request: shared_webhookrequest.WebhookRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
+
+
+
 @dataclasses.dataclass
 class PostOrgsOrgIDAppsAppIDWebhooksResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     error_info_response: Optional[shared_errorinforesponse.ErrorInfoResponse] = dataclasses.field(default=None)
@@ -30,3 +32,4 @@ class PostOrgsOrgIDAppsAppIDWebhooksResponse:
     webhook_response: Optional[shared_webhookresponse.WebhookResponse] = dataclasses.field(default=None)
     r"""A created webhook."""
     
+

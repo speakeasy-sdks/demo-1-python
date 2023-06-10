@@ -8,10 +8,10 @@ from test_1 import utils
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class ControllerResponse:
     r"""Controller represents deployment, stateful set etc"""
-    
     kind: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('kind') }})
     message: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('message') }})
     pods: list[shared_podstateresponse.PodStateResponse] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('pods') }})
@@ -19,3 +19,4 @@ class ControllerResponse:
     revision: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('revision') }})
     status: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status') }})
     
+

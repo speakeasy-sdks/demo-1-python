@@ -8,16 +8,18 @@ from ..shared import resourceaccountresponse as shared_resourceaccountresponse
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class GetOrgsOrgIDResourcesAccountsRequest:
-    
     org_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'orgId', 'style': 'simple', 'explode': False }})
     r"""The Organization ID."""
     
 
+
+
+
 @dataclasses.dataclass
 class GetOrgsOrgIDResourcesAccountsResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     humanitec_error_response: Optional[shared_humanitecerrorresponse.HumanitecErrorResponse] = dataclasses.field(default=None)
@@ -26,3 +28,4 @@ class GetOrgsOrgIDResourcesAccountsResponse:
     resource_account_responses: Optional[list[shared_resourceaccountresponse.ResourceAccountResponse]] = dataclasses.field(default=None)
     r"""A possibly empty list of Resources Accounts."""
     
+

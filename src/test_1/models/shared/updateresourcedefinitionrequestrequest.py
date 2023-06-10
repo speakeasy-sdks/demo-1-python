@@ -9,10 +9,10 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class UpdateResourceDefinitionRequestRequest:
     r"""UpdateResourceDefinitionRequest describes a ResourceDefinition change request."""
-    
     name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name') }})
     r"""The display name."""
     driver_account: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('driver_account'), 'exclude': lambda f: f is None }})
@@ -20,3 +20,4 @@ class UpdateResourceDefinitionRequestRequest:
     driver_inputs: Optional[shared_valuessecretsrequest.ValuesSecretsRequest] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('driver_inputs'), 'exclude': lambda f: f is None }})
     r"""ValuesSecrets stores data that should be passed around split by sensitivity."""
     
+

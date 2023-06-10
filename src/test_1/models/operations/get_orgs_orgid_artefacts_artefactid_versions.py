@@ -8,9 +8,9 @@ from ..shared import humanitecerrorresponse as shared_humanitecerrorresponse
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class GetOrgsOrgIDArtefactsArtefactIDVersionsRequest:
-    
     artefact_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'artefactId', 'style': 'simple', 'explode': False }})
     r"""The Artefact ID."""
     org_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'orgId', 'style': 'simple', 'explode': False }})
@@ -23,9 +23,11 @@ class GetOrgsOrgIDArtefactsArtefactIDVersionsRequest:
     r"""(Optional) Filter Artefact Versions by by name including a version or digest."""
     
 
+
+
+
 @dataclasses.dataclass
 class GetOrgsOrgIDArtefactsArtefactIDVersionsResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     artefact_version_responses: Optional[list[shared_artefactversionresponse.ArtefactVersionResponse]] = dataclasses.field(default=None)
@@ -34,3 +36,4 @@ class GetOrgsOrgIDArtefactsArtefactIDVersionsResponse:
     r"""Invalid inputs provided."""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     
+

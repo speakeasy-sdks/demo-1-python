@@ -9,13 +9,13 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class RegistryResponse:
     r"""Humanitec can be used to manage registry credentials. The Registry object represents how to match credentials to a particular registry.
     
     Humanitec supports all Docker compatible registries as well as the custom authentication formats used by AWS Elastic Container Registry and Google Container Registry. It also supports the injection of a specific secret to be copied from an existing namespace in the cluster.
     """
-    
     enable_ci: bool = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('enable_ci') }})
     r"""Indicates if registry secrets and credentials should be exposed to CI agents."""
     id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id') }})
@@ -44,3 +44,4 @@ class RegistryResponse:
     secrets: Optional[dict[str, shared_clustersecretresponse.ClusterSecretResponse]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('secrets'), 'exclude': lambda f: f is None }})
     r"""ClusterSecretsMap stores a list of Kuberenetes secret references for the target deployment clusters."""
     
+

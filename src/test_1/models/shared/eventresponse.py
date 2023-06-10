@@ -7,10 +7,10 @@ from test_1 import utils
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class EventResponse:
     r"""Events available for triggering automated jobs."""
-    
     properties: list[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('properties') }})
     r"""List of event properties which can be used as variables for this event"""
     scope: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('scope') }})
@@ -18,3 +18,4 @@ class EventResponse:
     type: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('type') }})
     r"""Event type"""
     
+

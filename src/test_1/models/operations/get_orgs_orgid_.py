@@ -8,16 +8,18 @@ from ..shared import organizationresponse as shared_organizationresponse
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class GetOrgsOrgIDRequest:
-    
     org_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'orgId', 'style': 'simple', 'explode': False }})
     r"""The Organization ID."""
     
 
+
+
+
 @dataclasses.dataclass
 class GetOrgsOrgIDResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     error_info_response: Optional[shared_errorinforesponse.ErrorInfoResponse] = dataclasses.field(default=None)
@@ -26,3 +28,4 @@ class GetOrgsOrgIDResponse:
     r"""Returns organization details."""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     
+

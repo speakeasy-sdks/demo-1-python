@@ -8,10 +8,10 @@ from typing import Any, Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class UserProfileExtendedResponse:
     r"""UserProfileExtended holds the profile information of a user including properties only accessible to the user."""
-    
     created_at: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('created_at') }})
     r"""The time the user was first registered with Humanitec"""
     id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id') }})
@@ -25,3 +25,4 @@ class UserProfileExtendedResponse:
     email: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('email'), 'exclude': lambda f: f is None }})
     r"""The email address of the user from the profile"""
     
+

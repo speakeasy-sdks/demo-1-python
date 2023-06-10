@@ -1,0 +1,12 @@
+# PostOrgsOrgIDAppsAppIDWebhooksResponse
+
+
+## Fields
+
+| Field                                                                                 | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `content_type`                                                                        | *str*                                                                                 | :heavy_check_mark:                                                                    | N/A                                                                                   |
+| `error_info_response`                                                                 | [Optional[shared.ErrorInfoResponse]](../../models/shared/errorinforesponse.md)        | :heavy_minus_sign:                                                                    | Some of the values supplied are invalid.<br/><br/>                                    |
+| `status_code`                                                                         | *int*                                                                                 | :heavy_check_mark:                                                                    | N/A                                                                                   |
+| `raw_response`                                                                        | [requests.Response](https://requests.readthedocs.io/en/latest/api/#requests.Response) | :heavy_minus_sign:                                                                    | N/A                                                                                   |
+| `webhook_response`                                                                    | [Optional[shared.WebhookResponse]](../../models/shared/webhookresponse.md)            | :heavy_minus_sign:                                                                    | A created webhook.<br/><br/>                                                          |

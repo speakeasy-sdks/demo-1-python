@@ -10,6 +10,7 @@ from test_1 import utils
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class DeltaResponse:
     r"""A Deployment Delta (or just \\"Delta\\") describes the changes that must be applied to one Deployment Set to generate another Deployment Set. Deployment Deltas are the only way to create new Deployment Sets.
@@ -42,7 +43,6 @@ class DeltaResponse:
      }
     ```
     """
-    
     id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id') }})
     r"""A unique ID for the Delta"""
     metadata: shared_deltametadataresponse.DeltaMetadataResponse = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('metadata') }})
@@ -50,3 +50,4 @@ class DeltaResponse:
     r"""ModuleDeltas groups the different operations together."""
     shared: list[shared_updateactionresponse.UpdateActionResponse] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('shared') }})
     
+

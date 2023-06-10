@@ -8,13 +8,13 @@ from typing import Any
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class ResourceTypeResponse:
     r"""Resources Types define the technology that Applications can have dependencies on.
     
     Each Resource Type also defines a set of input parameters (`inputs_schema`), and a set of output data (`outputs_schema`). When provisioning a resource, these are treated as inputs and outputs respectively.
     """
-    
     category: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('category') }})
     r"""Category name (used to group similar resources on the UI)."""
     inputs_schema: dict[str, Any] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('inputs_schema') }})
@@ -26,3 +26,4 @@ class ResourceTypeResponse:
     type: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('type') }})
     r"""Unique resource type identifier (system-wide, across all organizations)."""
     
+

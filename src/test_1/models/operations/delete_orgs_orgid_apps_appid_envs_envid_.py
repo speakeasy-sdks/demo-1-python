@@ -7,9 +7,9 @@ from ..shared import humanitecerrorresponse as shared_humanitecerrorresponse
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class DeleteOrgsOrgIDAppsAppIDEnvsEnvIDRequest:
-    
     app_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'appId', 'style': 'simple', 'explode': False }})
     r"""The Application ID."""
     env_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'envId', 'style': 'simple', 'explode': False }})
@@ -18,12 +18,15 @@ class DeleteOrgsOrgIDAppsAppIDEnvsEnvIDRequest:
     r"""The Organization ID."""
     
 
+
+
+
 @dataclasses.dataclass
 class DeleteOrgsOrgIDAppsAppIDEnvsEnvIDResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     humanitec_error_response: Optional[shared_humanitecerrorresponse.HumanitecErrorResponse] = dataclasses.field(default=None)
     r"""Attempt to delete the last Environment in an Application."""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     
+

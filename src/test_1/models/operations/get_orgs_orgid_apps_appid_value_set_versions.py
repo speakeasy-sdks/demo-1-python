@@ -7,9 +7,9 @@ from ..shared import valuesetversionresponse as shared_valuesetversionresponse
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class GetOrgsOrgIDAppsAppIDValueSetVersionsRequest:
-    
     app_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'appId', 'style': 'simple', 'explode': False }})
     r"""The Application ID."""
     org_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'orgId', 'style': 'simple', 'explode': False }})
@@ -18,12 +18,15 @@ class GetOrgsOrgIDAppsAppIDValueSetVersionsRequest:
     r"""(Optional) Return only value set version where the specified key changed"""
     
 
+
+
+
 @dataclasses.dataclass
 class GetOrgsOrgIDAppsAppIDValueSetVersionsResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     value_set_version_responses: Optional[list[shared_valuesetversionresponse.ValueSetVersionResponse]] = dataclasses.field(default=None)
     r"""A possibly empty list of ValueSetVersion."""
     
+

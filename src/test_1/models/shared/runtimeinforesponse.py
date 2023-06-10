@@ -8,10 +8,11 @@ from test_1 import utils
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class RuntimeInfoResponse:
     r"""RuntimeInfo object returned by the runtime endpoint. Represents a list post statuses grouped by modules and controllers (deployments and stateful sets)."""
-    
     modules: dict[str, dict[str, shared_controllerresponse.ControllerResponse]] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('modules') }})
     namespace: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('namespace') }})
     
+

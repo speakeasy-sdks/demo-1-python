@@ -8,6 +8,7 @@ from typing import Any, Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class UpdateActionRequest:
     r"""A representation of the main object defined in JSON Patch specified in RFC 6902 from the IETF. The main differences are:
@@ -16,9 +17,9 @@ class UpdateActionRequest:
     
     * `remove` can have have its scope of application applied in its `value`. e.g. `{\"scope\":\"delta\"}
     """
-    
     from_: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('from'), 'exclude': lambda f: f is None }})
     op: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('op'), 'exclude': lambda f: f is None }})
     path: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('path'), 'exclude': lambda f: f is None }})
     value: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('value'), 'exclude': lambda f: f is None }})
     
+

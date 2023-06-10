@@ -9,6 +9,7 @@ from test_1 import utils
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class PlainDeltaResponse:
     r"""Similar to the delta response, except the id and metadata properties.
@@ -35,8 +36,8 @@ class PlainDeltaResponse:
      }
     ```
     """
-    
     modules: shared_moduledeltasresponse.ModuleDeltasResponse = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('modules') }})
     r"""ModuleDeltas groups the different operations together."""
     shared: list[shared_updateactionresponse.UpdateActionResponse] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('shared') }})
     
+

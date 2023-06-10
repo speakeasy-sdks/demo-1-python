@@ -8,18 +8,20 @@ from ..shared import imageresponse as shared_imageresponse
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class GetOrgsOrgIDImagesImageIDRequest:
-    
     image_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'imageId', 'style': 'simple', 'explode': False }})
     r"""The Image ID."""
     org_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'orgId', 'style': 'simple', 'explode': False }})
     r"""The organization ID."""
     
 
+
+
+
 @dataclasses.dataclass
 class GetOrgsOrgIDImagesImageIDResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     humanitec_error_response: Optional[shared_humanitecerrorresponse.HumanitecErrorResponse] = dataclasses.field(default=None)
@@ -28,3 +30,4 @@ class GetOrgsOrgIDImagesImageIDResponse:
     r"""The Image Object requested."""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     
+

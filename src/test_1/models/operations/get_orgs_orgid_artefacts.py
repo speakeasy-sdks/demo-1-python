@@ -7,9 +7,9 @@ from ..shared import artefactresponse as shared_artefactresponse
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class GetOrgsOrgIDArtefactsRequest:
-    
     org_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'orgId', 'style': 'simple', 'explode': False }})
     r"""The organization ID."""
     name: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'name', 'style': 'form', 'explode': True }})
@@ -18,12 +18,15 @@ class GetOrgsOrgIDArtefactsRequest:
     r"""(Optional) Filter Artefacts by type."""
     
 
+
+
+
 @dataclasses.dataclass
 class GetOrgsOrgIDArtefactsResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     artefact_responses: Optional[list[shared_artefactresponse.ArtefactResponse]] = dataclasses.field(default=None)
     r"""The list of Artefacts within the organization."""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     
+

@@ -9,9 +9,9 @@ from ..shared import userroleresponse as shared_userroleresponse
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class PatchOrgsOrgIDEnvTypesEnvTypeUsersUserIDRequest:
-    
     env_type: str = dataclasses.field(metadata={'path_param': { 'field_name': 'envType', 'style': 'simple', 'explode': False }})
     r"""The Environment Type."""
     org_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'orgId', 'style': 'simple', 'explode': False }})
@@ -22,9 +22,11 @@ class PatchOrgsOrgIDEnvTypesEnvTypeUsersUserIDRequest:
     r"""The User ID"""
     
 
+
+
+
 @dataclasses.dataclass
 class PatchOrgsOrgIDEnvTypesEnvTypeUsersUserIDResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     humanitec_error_response: Optional[shared_humanitecerrorresponse.HumanitecErrorResponse] = dataclasses.field(default=None)
@@ -33,3 +35,4 @@ class PatchOrgsOrgIDEnvTypesEnvTypeUsersUserIDResponse:
     user_role_response: Optional[shared_userroleresponse.UserRoleResponse] = dataclasses.field(default=None)
     r"""The information on the user."""
     
+

@@ -8,13 +8,13 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class ImageBuildRequest:
     r"""DEPRECATED: This type exists for historical compatibility and should not be used. Please use the [Artefact API](https://api-docs.humanitec.com/#tag/Artefact) instead.
     
     Holds the metadata associated withe a Container Image Build
     """
-    
     branch: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('branch'), 'exclude': lambda f: f is None }})
     r"""The branch name of the branch the build was built on"""
     commit: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('commit'), 'exclude': lambda f: f is None }})
@@ -24,3 +24,4 @@ class ImageBuildRequest:
     tags: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('tags'), 'exclude': lambda f: f is None }})
     r"""The tag that the build was built from."""
     
+

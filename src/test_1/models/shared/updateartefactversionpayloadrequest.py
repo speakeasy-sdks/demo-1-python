@@ -7,10 +7,11 @@ from test_1 import utils
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class UpdateArtefactVersionPayloadRequest:
     r"""UpdateArtefactVersionPayload contains the `archived` field that should be set in the Artefact Version to update."""
-    
     archived: bool = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('archived') }})
     r"""The Value of the archived value."""
     
+

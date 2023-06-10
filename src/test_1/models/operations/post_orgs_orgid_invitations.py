@@ -9,18 +9,20 @@ from ..shared import userroleresponse as shared_userroleresponse
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class PostOrgsOrgIDInvitationsRequest:
-    
     org_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'orgId', 'style': 'simple', 'explode': False }})
     r"""The Organization ID."""
     user_invite_request_request: shared_userinviterequestrequest.UserInviteRequestRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     r"""The email and the desired role"""
     
 
+
+
+
 @dataclasses.dataclass
 class PostOrgsOrgIDInvitationsResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     humanitec_error_response: Optional[shared_humanitecerrorresponse.HumanitecErrorResponse] = dataclasses.field(default=None)
@@ -29,3 +31,4 @@ class PostOrgsOrgIDInvitationsResponse:
     user_role_responses: Optional[list[shared_userroleresponse.UserRoleResponse]] = dataclasses.field(default=None)
     r"""An temporary profile for the invited user."""
     
+

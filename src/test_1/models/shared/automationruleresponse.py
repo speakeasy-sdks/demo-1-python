@@ -7,10 +7,10 @@ from test_1 import utils
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class AutomationRuleResponse:
     r"""An Automation Rule defining how and when artefacts in an environment should be updated."""
-    
     active: bool = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('active') }})
     r"""Whether the rule will be processed or not."""
     artefacts_filter: list[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('artefacts_filter') }})
@@ -36,3 +36,4 @@ class AutomationRuleResponse:
     updated_at: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('updated_at') }})
     r"""The timestamp in UTC of when the Automation Rule was updated."""
     
+

@@ -1,0 +1,10 @@
+# PutOrgsOrgIDResourcesDriversDriverIDRequest
+
+
+## Fields
+
+| Field                                                                                  | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `update_driver_request_request`                                                        | [shared.UpdateDriverRequestRequest](../../models/shared/updatedriverrequestrequest.md) | :heavy_check_mark:                                                                     | N/A                                                                                    |
+| `driver_id`                                                                            | *str*                                                                                  | :heavy_check_mark:                                                                     | The Resource Driver ID.<br/><br/>                                                      |
+| `org_id`                                                                               | *str*                                                                                  | :heavy_check_mark:                                                                     | The Organization ID.<br/><br/>                                                         |

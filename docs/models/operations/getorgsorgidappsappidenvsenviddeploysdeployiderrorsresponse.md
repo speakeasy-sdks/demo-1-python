@@ -1,0 +1,11 @@
+# GetOrgsOrgIDAppsAppIDEnvsEnvIDDeploysDeployIDErrorsResponse
+
+
+## Fields
+
+| Field                                                                                  | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `content_type`                                                                         | *str*                                                                                  | :heavy_check_mark:                                                                     | N/A                                                                                    |
+| `deployment_error_responses`                                                           | list[[shared.DeploymentErrorResponse](../../models/shared/deploymenterrorresponse.md)] | :heavy_minus_sign:                                                                     | A List of deployment errors, could be empty.<br/><br/>                                 |
+| `status_code`                                                                          | *int*                                                                                  | :heavy_check_mark:                                                                     | N/A                                                                                    |
+| `raw_response`                                                                         | [requests.Response](https://requests.readthedocs.io/en/latest/api/#requests.Response)  | :heavy_minus_sign:                                                                     | N/A                                                                                    |

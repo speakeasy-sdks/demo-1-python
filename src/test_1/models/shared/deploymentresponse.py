@@ -8,13 +8,13 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class DeploymentResponse:
     r"""Deployments represent updates to the running state of an Environment.
     
     Deployments are made by applying _Deltas_ to a state defined by an existing Deployment. The Environment’s from_deploy property defines the Deployment. This Deployment is usually but not always in the current Environment. If the Deployment is from another Environment, the state of that Environment will be \"cloned\" into the current Environment with the option to apply a Delta.
     """
-    
     comment: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('comment') }})
     r"""An optional comment to help communicate the purpose of the Deployment."""
     created_at: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('created_at') }})
@@ -40,3 +40,4 @@ class DeploymentResponse:
     value_set_version_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('value_set_version_id'), 'exclude': lambda f: f is None }})
     r"""ID of the Value Set Version describe the values to be used for this Deployment."""
     
+

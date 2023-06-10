@@ -8,9 +8,9 @@ from ..shared import resourcedefinitionchangeresponse as shared_resourcedefiniti
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class DeleteOrgsOrgIDResourcesDefsDefIDRequest:
-    
     def_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'defId', 'style': 'simple', 'explode': False }})
     r"""The Resource Definition ID."""
     org_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'orgId', 'style': 'simple', 'explode': False }})
@@ -19,9 +19,11 @@ class DeleteOrgsOrgIDResourcesDefsDefIDRequest:
     r"""If set to `true`, will mark the Resource Definition for deletion, even if it affects existing Active Resources."""
     
 
+
+
+
 @dataclasses.dataclass
 class DeleteOrgsOrgIDResourcesDefsDefIDResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     humanitec_error_response: Optional[shared_humanitecerrorresponse.HumanitecErrorResponse] = dataclasses.field(default=None)
@@ -30,3 +32,4 @@ class DeleteOrgsOrgIDResourcesDefsDefIDResponse:
     resource_definition_change_responses: Optional[list[shared_resourcedefinitionchangeresponse.ResourceDefinitionChangeResponse]] = dataclasses.field(default=None)
     r"""List of Active Resources that still reference this Resource Definition."""
     
+

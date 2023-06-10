@@ -1,0 +1,12 @@
+# GetOrgsOrgIDRegistriesRegIDCredsResponse
+
+
+## Fields
+
+| Field                                                                                  | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `content_type`                                                                         | *str*                                                                                  | :heavy_check_mark:                                                                     | N/A                                                                                    |
+| `error_info_response`                                                                  | [Optional[shared.ErrorInfoResponse]](../../models/shared/errorinforesponse.md)         | :heavy_minus_sign:                                                                     | Request parameters are incomplete or invalid.<br/><br/>                                |
+| `registry_creds_response`                                                              | [Optional[shared.RegistryCredsResponse]](../../models/shared/registrycredsresponse.md) | :heavy_minus_sign:                                                                     | Current account credentials or secret details for the registry.<br/><br/>              |
+| `status_code`                                                                          | *int*                                                                                  | :heavy_check_mark:                                                                     | N/A                                                                                    |
+| `raw_response`                                                                         | [requests.Response](https://requests.readthedocs.io/en/latest/api/#requests.Response)  | :heavy_minus_sign:                                                                     | N/A                                                                                    |

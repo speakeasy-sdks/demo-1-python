@@ -8,10 +8,10 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class AccountCredsRequest:
     r"""AccountCreds represents an account credentials (either, username- or token-based)."""
-    
     password: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('password') }})
     r"""Account password or token secret."""
     username: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('username') }})
@@ -19,3 +19,4 @@ class AccountCredsRequest:
     expires: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('expires'), 'exclude': lambda f: f is None }})
     r"""Account credentials expiration timestamp."""
     
+

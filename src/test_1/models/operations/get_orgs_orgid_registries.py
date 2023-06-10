@@ -8,16 +8,18 @@ from ..shared import registryresponse as shared_registryresponse
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class GetOrgsOrgIDRegistriesRequest:
-    
     org_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'orgId', 'style': 'simple', 'explode': False }})
     r"""Unique (alpha-numerical) organization identifier."""
     
 
+
+
+
 @dataclasses.dataclass
 class GetOrgsOrgIDRegistriesResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     error_info_response: Optional[shared_errorinforesponse.ErrorInfoResponse] = dataclasses.field(default=None)
@@ -26,3 +28,4 @@ class GetOrgsOrgIDRegistriesResponse:
     registry_responses: Optional[list[shared_registryresponse.RegistryResponse]] = dataclasses.field(default=None)
     r"""A Possibly empty list of Registries."""
     
+

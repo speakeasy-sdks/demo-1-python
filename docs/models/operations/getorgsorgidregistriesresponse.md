@@ -1,0 +1,12 @@
+# GetOrgsOrgIDRegistriesResponse
+
+
+## Fields
+
+| Field                                                                                 | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `content_type`                                                                        | *str*                                                                                 | :heavy_check_mark:                                                                    | N/A                                                                                   |
+| `error_info_response`                                                                 | [Optional[shared.ErrorInfoResponse]](../../models/shared/errorinforesponse.md)        | :heavy_minus_sign:                                                                    | Request parameters are incomplete or invalid.<br/><br/>                               |
+| `registry_responses`                                                                  | list[[shared.RegistryResponse](../../models/shared/registryresponse.md)]              | :heavy_minus_sign:                                                                    | A Possibly empty list of Registries.<br/><br/>                                        |
+| `status_code`                                                                         | *int*                                                                                 | :heavy_check_mark:                                                                    | N/A                                                                                   |
+| `raw_response`                                                                        | [requests.Response](https://requests.readthedocs.io/en/latest/api/#requests.Response) | :heavy_minus_sign:                                                                    | N/A                                                                                   |

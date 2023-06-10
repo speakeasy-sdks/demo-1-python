@@ -9,9 +9,9 @@ from ..shared import updateresourceaccountrequestrequest as shared_updateresourc
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class PatchOrgsOrgIDResourcesAccountsAccIDRequest:
-    
     acc_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'accId', 'style': 'simple', 'explode': False }})
     r"""The Resource Account ID."""
     org_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'orgId', 'style': 'simple', 'explode': False }})
@@ -19,9 +19,11 @@ class PatchOrgsOrgIDResourcesAccountsAccIDRequest:
     update_resource_account_request_request: shared_updateresourceaccountrequestrequest.UpdateResourceAccountRequestRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
+
+
+
 @dataclasses.dataclass
 class PatchOrgsOrgIDResourcesAccountsAccIDResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     humanitec_error_response: Optional[shared_humanitecerrorresponse.HumanitecErrorResponse] = dataclasses.field(default=None)
@@ -30,3 +32,4 @@ class PatchOrgsOrgIDResourcesAccountsAccIDResponse:
     resource_account_response: Optional[shared_resourceaccountresponse.ResourceAccountResponse] = dataclasses.field(default=None)
     r"""The updated Resource Account details."""
     
+

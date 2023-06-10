@@ -9,10 +9,10 @@ from typing import Any, Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class WebhookRequest:
     r"""Webhook is a special type of a Job, it performs a HTTPS request to a specified URL with specified headers."""
-    
     disabled: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('disabled'), 'exclude': lambda f: f is None }})
     r"""Defines whether this job is currently disabled."""
     headers: Optional[dict[str, Any]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('headers'), 'exclude': lambda f: f is None }})
@@ -24,3 +24,4 @@ class WebhookRequest:
     url: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('url'), 'exclude': lambda f: f is None }})
     r"""Thw webhook's URL (without protocol, only HTTPS is supported)"""
     
+

@@ -7,19 +7,22 @@ from ..shared import applicationresponse as shared_applicationresponse
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class GetOrgsOrgIDAppsRequest:
-    
     org_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'orgId', 'style': 'simple', 'explode': False }})
     r"""The Organization ID."""
     
 
+
+
+
 @dataclasses.dataclass
 class GetOrgsOrgIDAppsResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     application_responses: Optional[list[shared_applicationresponse.ApplicationResponse]] = dataclasses.field(default=None)
     r"""Possibly empty list of Applications."""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     
+

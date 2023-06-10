@@ -8,13 +8,13 @@ from test_1 import utils
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class ApplicationResponse:
     r"""An Application is a collection of Workloads that work together. When deployed, all Workloads in an Application are deployed to the same namespace.
     
     Apps are the root of the configuration tree holding Environments, Deployments, Shared Values, and Secrets.
     """
-    
     created_at: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('created_at') }})
     r"""The timestamp in UTC indicates when the Application was created."""
     created_by: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('created_by') }})
@@ -26,3 +26,4 @@ class ApplicationResponse:
     name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name') }})
     r"""The Human-friendly name for the Application."""
     
+

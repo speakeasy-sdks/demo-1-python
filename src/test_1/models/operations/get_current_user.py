@@ -7,12 +7,13 @@ from ..shared import userprofileextendedresponse as shared_userprofileextendedre
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class GetCurrentUserResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     user_profile_extended_response: Optional[shared_userprofileextendedresponse.UserProfileExtendedResponse] = dataclasses.field(default=None)
     r"""The extended user profile of the user."""
     
+

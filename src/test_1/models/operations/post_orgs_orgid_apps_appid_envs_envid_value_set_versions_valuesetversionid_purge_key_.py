@@ -8,9 +8,9 @@ from ..shared import valuesetactionpayloadrequest as shared_valuesetactionpayloa
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class PostOrgsOrgIDAppsAppIDEnvsEnvIDValueSetVersionsValueSetVersionIDPurgeKeyRequest:
-    
     app_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'appId', 'style': 'simple', 'explode': False }})
     r"""The Application ID."""
     env_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'envId', 'style': 'simple', 'explode': False }})
@@ -24,12 +24,15 @@ class PostOrgsOrgIDAppsAppIDEnvsEnvIDValueSetVersionsValueSetVersionIDPurgeKeyRe
     r"""The ValueSetVersion ID."""
     
 
+
+
+
 @dataclasses.dataclass
 class PostOrgsOrgIDAppsAppIDEnvsEnvIDValueSetVersionsValueSetVersionIDPurgeKeyResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     humanitec_error_response: Optional[shared_humanitecerrorresponse.HumanitecErrorResponse] = dataclasses.field(default=None)
     r"""The specified key can't be purged in this version."""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     
+

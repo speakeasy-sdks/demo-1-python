@@ -6,9 +6,9 @@ import requests as requests_http
 from typing import Any, Optional
 
 
+
 @dataclasses.dataclass
 class GetOrgsOrgIDAppsAppIDSetsSetIDRequest:
-    
     app_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'appId', 'style': 'simple', 'explode': False }})
     r"""The Application ID."""
     org_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'orgId', 'style': 'simple', 'explode': False }})
@@ -19,9 +19,11 @@ class GetOrgsOrgIDAppsAppIDSetsSetIDRequest:
     r"""ID of the Deployment Set to compared against."""
     
 
+
+
+
 @dataclasses.dataclass
 class GetOrgsOrgIDAppsAppIDSetsSetIDResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     get_orgs_org_id_apps_app_id_sets_set_id_200_application_json_one_of: Optional[Any] = dataclasses.field(default=None)
@@ -30,3 +32,4 @@ class GetOrgsOrgIDAppsAppIDSetsSetIDResponse:
     r"""No Deployment Set with ID `setId` found in Application."""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     
+

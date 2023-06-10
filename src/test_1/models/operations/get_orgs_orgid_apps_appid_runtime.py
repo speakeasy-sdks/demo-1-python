@@ -7,9 +7,9 @@ from ..shared import environmentruntimeinforesponse as shared_environmentruntime
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class GetOrgsOrgIDAppsAppIDRuntimeRequest:
-    
     app_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'appId', 'style': 'simple', 'explode': False }})
     r"""The Application ID."""
     org_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'orgId', 'style': 'simple', 'explode': False }})
@@ -18,12 +18,15 @@ class GetOrgsOrgIDAppsAppIDRuntimeRequest:
     r"""Filter environments by ID (required). Up to 5 ids can be supplied per request."""
     
 
+
+
+
 @dataclasses.dataclass
 class GetOrgsOrgIDAppsAppIDRuntimeResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     environment_runtime_info_responses: Optional[list[shared_environmentruntimeinforesponse.EnvironmentRuntimeInfoResponse]] = dataclasses.field(default=None)
     r"""A list of the RuntimeInfo of the environments specified by the id parameter."""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     
+

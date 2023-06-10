@@ -7,21 +7,24 @@ from ..shared import errorinforesponse as shared_errorinforesponse
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class DeleteOrgsOrgIDRegistriesRegIDRequest:
-    
     org_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'orgId', 'style': 'simple', 'explode': False }})
     r"""Unique (alpha-numerical) organization identifier."""
     reg_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'regId', 'style': 'simple', 'explode': False }})
     r"""Unique (alpha-numerical) registry identifier."""
     
 
+
+
+
 @dataclasses.dataclass
 class DeleteOrgsOrgIDRegistriesRegIDResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     error_info_response: Optional[shared_errorinforesponse.ErrorInfoResponse] = dataclasses.field(default=None)
     r"""Request parameters are incomplete or invalid."""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     
+

@@ -9,6 +9,7 @@ from typing import Any
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class SetResponse:
     r"""A Deployment Set (or just \\"Set\\") defines all of the non-Environment specific configuration for Modules and External Resources. Each of these Modules or External Resources has a unique name.
@@ -43,7 +44,6 @@ class SetResponse:
     
     For details about how the Humanitec provided profiles work, see (Deployment Set Profiles)[].
     """
-    
     id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id') }})
     r"""The ID which is a hash of the content of the Deployment Set."""
     modules: dict[str, dict[str, shared_controllerresponse.ControllerResponse]] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('modules') }})
@@ -53,3 +53,4 @@ class SetResponse:
     version: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('version') }})
     r"""The version of the Deployment Set Schema to use. (Currently, only 0 is supported, and if omitted, version 0 is assumed.)"""
     
+

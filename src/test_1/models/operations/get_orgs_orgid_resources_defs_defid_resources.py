@@ -8,18 +8,20 @@ from ..shared import humanitecerrorresponse as shared_humanitecerrorresponse
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class GetOrgsOrgIDResourcesDefsDefIDResourcesRequest:
-    
     def_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'defId', 'style': 'simple', 'explode': False }})
     r"""The Resource Definition ID."""
     org_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'orgId', 'style': 'simple', 'explode': False }})
     r"""The Organization ID."""
     
 
+
+
+
 @dataclasses.dataclass
 class GetOrgsOrgIDResourcesDefsDefIDResourcesResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     active_resource_responses: Optional[list[shared_activeresourceresponse.ActiveResourceResponse]] = dataclasses.field(default=None)
@@ -28,3 +30,4 @@ class GetOrgsOrgIDResourcesDefsDefIDResourcesResponse:
     r"""Internal application error."""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     
+

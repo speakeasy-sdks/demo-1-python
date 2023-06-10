@@ -8,18 +8,20 @@ from ..shared import imagebuildresponse as shared_imagebuildresponse
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class GetOrgsOrgIDImagesImageIDBuildsRequest:
-    
     image_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'imageId', 'style': 'simple', 'explode': False }})
     r"""The Image ID."""
     org_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'orgId', 'style': 'simple', 'explode': False }})
     r"""The organization ID."""
     
 
+
+
+
 @dataclasses.dataclass
 class GetOrgsOrgIDImagesImageIDBuildsResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     humanitec_error_response: Optional[shared_humanitecerrorresponse.HumanitecErrorResponse] = dataclasses.field(default=None)
@@ -28,3 +30,4 @@ class GetOrgsOrgIDImagesImageIDBuildsResponse:
     r"""Possibly empty list of Builds of Container Images."""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     
+

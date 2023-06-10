@@ -7,9 +7,9 @@ from ..shared import automationruleresponse as shared_automationruleresponse
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class GetOrgsOrgIDAppsAppIDEnvsEnvIDRulesRuleIDRequest:
-    
     app_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'appId', 'style': 'simple', 'explode': False }})
     r"""The Application ID."""
     env_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'envId', 'style': 'simple', 'explode': False }})
@@ -20,12 +20,15 @@ class GetOrgsOrgIDAppsAppIDEnvsEnvIDRulesRuleIDRequest:
     r"""The Automation Rule ID."""
     
 
+
+
+
 @dataclasses.dataclass
 class GetOrgsOrgIDAppsAppIDEnvsEnvIDRulesRuleIDResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     automation_rule_response: Optional[shared_automationruleresponse.AutomationRuleResponse] = dataclasses.field(default=None)
     r"""The AutomationRule"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     
+

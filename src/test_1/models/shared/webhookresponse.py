@@ -9,10 +9,10 @@ from typing import Any, Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class WebhookResponse:
     r"""Webhook is a special type of a Job, it performs a HTTPS request to a specified URL with specified headers."""
-    
     disabled: bool = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('disabled') }})
     r"""Defines whether this job is currently disabled."""
     headers: dict[str, Any] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('headers') }})
@@ -28,3 +28,4 @@ class WebhookResponse:
     created_by: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('created_by'), 'exclude': lambda f: f is None }})
     r"""The user who created this Job"""
     
+

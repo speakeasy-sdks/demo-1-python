@@ -8,13 +8,14 @@ from typing import Any
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class PodStateResponse:
     r"""PodState represents single pod status"""
-    
     container_statuses: list[dict[str, Any]] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('containerStatuses') }})
     phase: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('phase') }})
     pod_name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('podName') }})
     revision: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('revision') }})
     status: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status') }})
     
+

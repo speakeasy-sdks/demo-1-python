@@ -8,9 +8,9 @@ from ..shared import userprofileextendedresponse as shared_userprofileextendedre
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class PatchCurrentUserResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     humanitec_error_response: Optional[shared_humanitecerrorresponse.HumanitecErrorResponse] = dataclasses.field(default=None)
@@ -19,3 +19,4 @@ class PatchCurrentUserResponse:
     user_profile_extended_response: Optional[shared_userprofileextendedresponse.UserProfileExtendedResponse] = dataclasses.field(default=None)
     r"""The extended user profile of the user."""
     
+

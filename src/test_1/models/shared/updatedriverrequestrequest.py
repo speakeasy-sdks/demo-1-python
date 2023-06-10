@@ -8,10 +8,10 @@ from typing import Any, Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class UpdateDriverRequestRequest:
     r"""UpdateDriverRequest describes the update driver details request."""
-    
     account_types: list[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('account_types') }})
     r"""List of resources accounts types supported by the driver"""
     inputs_schema: dict[str, Any] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('inputs_schema') }})
@@ -25,3 +25,4 @@ class UpdateDriverRequestRequest:
     template: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('template'), 'exclude': lambda f: f is None }})
     r"""If the driver is a virtual driver, template defines a Go template that converts the driver inputs supplied in the resource definition into the driver inputs for the target driver."""
     
+

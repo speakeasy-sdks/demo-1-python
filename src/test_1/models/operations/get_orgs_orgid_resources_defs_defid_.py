@@ -8,18 +8,20 @@ from ..shared import resourcedefinitionresponse as shared_resourcedefinitionresp
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class GetOrgsOrgIDResourcesDefsDefIDRequest:
-    
     def_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'defId', 'style': 'simple', 'explode': False }})
     r"""The Resource Definition ID."""
     org_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'orgId', 'style': 'simple', 'explode': False }})
     r"""The Organization ID."""
     
 
+
+
+
 @dataclasses.dataclass
 class GetOrgsOrgIDResourcesDefsDefIDResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     humanitec_error_response: Optional[shared_humanitecerrorresponse.HumanitecErrorResponse] = dataclasses.field(default=None)
@@ -28,3 +30,4 @@ class GetOrgsOrgIDResourcesDefsDefIDResponse:
     resource_definition_response: Optional[shared_resourcedefinitionresponse.ResourceDefinitionResponse] = dataclasses.field(default=None)
     r"""The requested Resources Definition details."""
     
+

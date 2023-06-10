@@ -9,9 +9,9 @@ from ..shared import updateresourcedefinitionrequestrequest as shared_updatereso
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class PutOrgsOrgIDResourcesDefsDefIDRequest:
-    
     def_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'defId', 'style': 'simple', 'explode': False }})
     r"""The Resource Definition ID."""
     org_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'orgId', 'style': 'simple', 'explode': False }})
@@ -25,9 +25,11 @@ class PutOrgsOrgIDResourcesDefsDefIDRequest:
     """
     
 
+
+
+
 @dataclasses.dataclass
 class PutOrgsOrgIDResourcesDefsDefIDResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     humanitec_error_response: Optional[shared_humanitecerrorresponse.HumanitecErrorResponse] = dataclasses.field(default=None)
@@ -36,3 +38,4 @@ class PutOrgsOrgIDResourcesDefsDefIDResponse:
     resource_definition_response: Optional[shared_resourcedefinitionresponse.ResourceDefinitionResponse] = dataclasses.field(default=None)
     r"""The updated Resource Definition."""
     
+

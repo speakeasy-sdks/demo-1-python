@@ -9,9 +9,9 @@ from ..shared import humanitecerrorresponse as shared_humanitecerrorresponse
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class PostOrgsOrgIDArtefactVersionsRequest:
-    
     add_artefact_version_payload_request: shared_addartefactversionpayloadrequest.AddArtefactVersionPayloadRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     r"""The data needed to register a new Artefact Version within the organization."""
     org_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'orgId', 'style': 'simple', 'explode': False }})
@@ -20,9 +20,11 @@ class PostOrgsOrgIDArtefactVersionsRequest:
     r"""(Optional) Which version control system the version comes from. Default value is \\"git\\". If this parameter is not supplied or its value is \\"git\\", the provided ref, if not empty, is checked to ensure that it has the prefix \\"refs/\\"."""
     
 
+
+
+
 @dataclasses.dataclass
 class PostOrgsOrgIDArtefactVersionsResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     artefact_version_response: Optional[shared_artefactversionresponse.ArtefactVersionResponse] = dataclasses.field(default=None)
@@ -31,3 +33,4 @@ class PostOrgsOrgIDArtefactVersionsResponse:
     r"""Either one or more request body parameters are missing or invalid, or the requested payload is not provided or malformed."""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     
+

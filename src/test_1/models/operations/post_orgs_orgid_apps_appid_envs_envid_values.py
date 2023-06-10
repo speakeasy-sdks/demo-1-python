@@ -9,9 +9,9 @@ from ..shared import valueresponse as shared_valueresponse
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class PostOrgsOrgIDAppsAppIDEnvsEnvIDValuesRequest:
-    
     app_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'appId', 'style': 'simple', 'explode': False }})
     r"""The Application ID."""
     env_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'envId', 'style': 'simple', 'explode': False }})
@@ -22,9 +22,11 @@ class PostOrgsOrgIDAppsAppIDEnvsEnvIDValuesRequest:
     r"""Definition of the new Shared Value."""
     
 
+
+
+
 @dataclasses.dataclass
 class PostOrgsOrgIDAppsAppIDEnvsEnvIDValuesResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     humanitec_error_response: Optional[shared_humanitecerrorresponse.HumanitecErrorResponse] = dataclasses.field(default=None)
@@ -33,3 +35,4 @@ class PostOrgsOrgIDAppsAppIDEnvsEnvIDValuesResponse:
     value_response: Optional[shared_valueresponse.ValueResponse] = dataclasses.field(default=None)
     r"""Shared Value successfully created."""
     
+

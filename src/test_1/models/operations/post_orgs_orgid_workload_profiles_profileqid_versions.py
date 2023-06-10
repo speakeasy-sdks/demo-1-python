@@ -9,25 +9,29 @@ from ..shared import workloadprofileversionresponse as shared_workloadprofilever
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class PostOrgsOrgIDWorkloadProfilesProfileQidVersionsRequestBodyFile:
-    
     content: bytes = dataclasses.field(metadata={'multipart_form': { 'content': True }})
     file: str = dataclasses.field(metadata={'multipart_form': { 'field_name': 'file' }})
     
 
+
+
+
 @dataclasses.dataclass
 class PostOrgsOrgIDWorkloadProfilesProfileQidVersionsRequestBody:
     r"""Workload profile version metadata."""
-    
     file: Optional[PostOrgsOrgIDWorkloadProfilesProfileQidVersionsRequestBodyFile] = dataclasses.field(default=None, metadata={'multipart_form': { 'file': True }})
     metadata: Optional[shared_workloadprofileversionrequest.WorkloadProfileVersionRequest] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'metadata', 'json': True }})
     r"""Each Workload Profile has one or more Versions associated with it. In order to add a version, a Workload Profile must first be created."""
     
 
+
+
+
 @dataclasses.dataclass
 class PostOrgsOrgIDWorkloadProfilesProfileQidVersionsRequest:
-    
     org_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'orgId', 'style': 'simple', 'explode': False }})
     r"""The Organization ID."""
     profile_qid: str = dataclasses.field(metadata={'path_param': { 'field_name': 'profileQid', 'style': 'simple', 'explode': False }})
@@ -36,9 +40,11 @@ class PostOrgsOrgIDWorkloadProfilesProfileQidVersionsRequest:
     r"""Workload profile version metadata."""
     
 
+
+
+
 @dataclasses.dataclass
 class PostOrgsOrgIDWorkloadProfilesProfileQidVersionsResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     humanitec_error_response: Optional[shared_humanitecerrorresponse.HumanitecErrorResponse] = dataclasses.field(default=None)
@@ -47,3 +53,4 @@ class PostOrgsOrgIDWorkloadProfilesProfileQidVersionsResponse:
     workload_profile_version_response: Optional[shared_workloadprofileversionresponse.WorkloadProfileVersionResponse] = dataclasses.field(default=None)
     r"""The newly created Workload Profile Version metadata."""
     
+

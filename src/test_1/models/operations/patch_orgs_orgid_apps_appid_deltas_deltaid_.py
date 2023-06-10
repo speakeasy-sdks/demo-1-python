@@ -9,9 +9,9 @@ from ..shared import humanitecerrorresponse as shared_humanitecerrorresponse
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class PatchOrgsOrgIDAppsAppIDDeltasDeltaIDRequest:
-    
     app_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'appId', 'style': 'simple', 'explode': False }})
     r"""The Application ID."""
     delta_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'deltaId', 'style': 'simple', 'explode': False }})
@@ -45,9 +45,11 @@ class PatchOrgsOrgIDAppsAppIDDeltasDeltaIDRequest:
     """
     
 
+
+
+
 @dataclasses.dataclass
 class PatchOrgsOrgIDAppsAppIDDeltasDeltaIDResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     delta_response: Optional[shared_deltaresponse.DeltaResponse] = dataclasses.field(default=None)
@@ -58,3 +60,4 @@ class PatchOrgsOrgIDAppsAppIDDeltasDeltaIDResponse:
     r"""No Deployment Delta with ID `deltaId` found in Application."""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     
+

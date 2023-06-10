@@ -7,10 +7,10 @@ from test_1 import utils
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class OrganizationResponse:
     r"""An Organization is the top level object in Humanitec. All other objects belong to an Organization."""
-    
     created_at: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('created_at') }})
     r"""Timestamp when the Organization was created."""
     created_by: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('created_by') }})
@@ -20,3 +20,4 @@ class OrganizationResponse:
     name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name') }})
     r"""Human friendly name for the Organization."""
     
+

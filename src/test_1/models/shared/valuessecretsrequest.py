@@ -8,12 +8,13 @@ from typing import Any, Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class ValuesSecretsRequest:
     r"""ValuesSecrets stores data that should be passed around split by sensitivity."""
-    
     secrets: Optional[dict[str, Any]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('secrets'), 'exclude': lambda f: f is None }})
     r"""Secrets section of the data set. Sensitive information is stored in the Vault and replaced with the Vault paths when sent outside."""
     values: Optional[dict[str, Any]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('values'), 'exclude': lambda f: f is None }})
     r"""Values section of the data set. Passed around as-is."""
     
+

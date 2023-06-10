@@ -9,18 +9,20 @@ from ..shared import humanitecerrorresponse as shared_humanitecerrorresponse
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class PostOrgsOrgIDResourcesDriversRequest:
-    
     create_driver_request_request: shared_createdriverrequestrequest.CreateDriverRequestRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     r"""Resources Driver details."""
     org_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'orgId', 'style': 'simple', 'explode': False }})
     r"""The Organization ID."""
     
 
+
+
+
 @dataclasses.dataclass
 class PostOrgsOrgIDResourcesDriversResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     driver_definition_response: Optional[shared_driverdefinitionresponse.DriverDefinitionResponse] = dataclasses.field(default=None)
@@ -29,3 +31,4 @@ class PostOrgsOrgIDResourcesDriversResponse:
     r"""One or more request parameters is missing or invalid."""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     
+

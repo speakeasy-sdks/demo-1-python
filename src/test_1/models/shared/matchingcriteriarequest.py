@@ -8,6 +8,7 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class MatchingCriteriaRequest:
     r"""Matching Criteria are a set of rules used to choose which Resource Definition to use to provision a particular Resource Type.
@@ -28,7 +29,6 @@ class MatchingCriteriaRequest:
     
     Humanitec will reject the registration of matching criteria rules that duplicate rules already present for a Resource Type.
     """
-    
     app_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('app_id'), 'exclude': lambda f: f is None }})
     r"""(Optional) The ID of the Application that the Resources should belong to."""
     env_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('env_id'), 'exclude': lambda f: f is None }})
@@ -40,3 +40,4 @@ class MatchingCriteriaRequest:
     res_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('res_id'), 'exclude': lambda f: f is None }})
     r"""(Optional) The ID of the Resource in the Deployment Set. The ID is normally a `.` separated path to the definition in the set, e.g. `modules.my-module.externals.my-database`."""
     
+

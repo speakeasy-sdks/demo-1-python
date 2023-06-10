@@ -8,9 +8,9 @@ from ..shared import humanitecerrorresponse as shared_humanitecerrorresponse
 from typing import Any, Optional
 
 
+
 @dataclasses.dataclass
 class PostOrgsOrgIDAppsAppIDDeltasRequest:
-    
     app_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'appId', 'style': 'simple', 'explode': False }})
     r"""The Application ID."""
     delta_request: shared_deltarequest.DeltaRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
@@ -24,9 +24,11 @@ class PostOrgsOrgIDAppsAppIDDeltasRequest:
     r"""The Organization ID."""
     
 
+
+
+
 @dataclasses.dataclass
 class PostOrgsOrgIDAppsAppIDDeltasResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     humanitec_error_response: Optional[shared_humanitecerrorresponse.HumanitecErrorResponse] = dataclasses.field(default=None)
@@ -35,3 +37,4 @@ class PostOrgsOrgIDAppsAppIDDeltasResponse:
     r"""The requested Deployment Delta."""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     
+

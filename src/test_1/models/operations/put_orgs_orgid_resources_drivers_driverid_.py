@@ -9,9 +9,9 @@ from ..shared import updatedriverrequestrequest as shared_updatedriverrequestreq
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class PutOrgsOrgIDResourcesDriversDriverIDRequest:
-    
     driver_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'driverId', 'style': 'simple', 'explode': False }})
     r"""The Resource Driver ID."""
     org_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'orgId', 'style': 'simple', 'explode': False }})
@@ -19,9 +19,11 @@ class PutOrgsOrgIDResourcesDriversDriverIDRequest:
     update_driver_request_request: shared_updatedriverrequestrequest.UpdateDriverRequestRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
+
+
+
 @dataclasses.dataclass
 class PutOrgsOrgIDResourcesDriversDriverIDResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     driver_definition_response: Optional[shared_driverdefinitionresponse.DriverDefinitionResponse] = dataclasses.field(default=None)
@@ -30,3 +32,4 @@ class PutOrgsOrgIDResourcesDriversDriverIDResponse:
     r"""One or more request parameters is missing or invalid."""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     
+

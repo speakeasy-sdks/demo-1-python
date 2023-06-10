@@ -8,18 +8,20 @@ from ..shared import humanitecerrorresponse as shared_humanitecerrorresponse
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class GetOrgsOrgIDEnvTypesEnvTypeIDRequest:
-    
     env_type_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'envTypeId', 'style': 'simple', 'explode': False }})
     r"""ID of the Environment Type."""
     org_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'orgId', 'style': 'simple', 'explode': False }})
     r"""The Organization ID."""
     
 
+
+
+
 @dataclasses.dataclass
 class GetOrgsOrgIDEnvTypesEnvTypeIDResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     environment_type_response: Optional[shared_environmenttyperesponse.EnvironmentTypeResponse] = dataclasses.field(default=None)
@@ -28,3 +30,4 @@ class GetOrgsOrgIDEnvTypesEnvTypeIDResponse:
     r"""No Environment Type with `id` in Organization."""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     
+

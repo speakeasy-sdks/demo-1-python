@@ -8,13 +8,13 @@ from typing import Any, Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class DriverDefinitionResponse:
     r"""DriverDefinition describes the resource driver.
     
     Resource Drivers are code that fulfils the Humanitec Resource Driver Interface. This interface allows for certain actions to be performed on resources such as creation and destruction. Humanitec provides numerous Resource Drivers “out of the box”. It is also possible to use 3rd party Resource Drivers or write your own.
     """
-    
     account_types: list[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('account_types') }})
     r"""List of resources accounts types supported by the driver"""
     id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id') }})
@@ -32,3 +32,4 @@ class DriverDefinitionResponse:
     template: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('template'), 'exclude': lambda f: f is None }})
     r"""If the driver is a virtual driver, template defines a Go template that converts the driver inputs supplied in the resource definition into the driver inputs for the target driver."""
     
+

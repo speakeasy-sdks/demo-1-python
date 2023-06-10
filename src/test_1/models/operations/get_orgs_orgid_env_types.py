@@ -7,19 +7,22 @@ from ..shared import environmenttyperesponse as shared_environmenttyperesponse
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class GetOrgsOrgIDEnvTypesRequest:
-    
     org_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'orgId', 'style': 'simple', 'explode': False }})
     r"""The Organization ID."""
     
 
+
+
+
 @dataclasses.dataclass
 class GetOrgsOrgIDEnvTypesResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     environment_type_responses: Optional[list[shared_environmenttyperesponse.EnvironmentTypeResponse]] = dataclasses.field(default=None)
     r"""A list of Environment Types."""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     
+

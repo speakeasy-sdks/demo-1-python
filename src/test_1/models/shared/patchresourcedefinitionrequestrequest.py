@@ -9,10 +9,10 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class PatchResourceDefinitionRequestRequest:
     r"""PatchResourceDefinitionRequest describes a ResourceDefinition change request."""
-    
     driver_account: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('driver_account'), 'exclude': lambda f: f is None }})
     r"""(Optional) Security account required by the driver."""
     driver_inputs: Optional[shared_valuessecretsrequest.ValuesSecretsRequest] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('driver_inputs'), 'exclude': lambda f: f is None }})
@@ -20,3 +20,4 @@ class PatchResourceDefinitionRequestRequest:
     name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name'), 'exclude': lambda f: f is None }})
     r"""(Optional) Resource display name"""
     
+

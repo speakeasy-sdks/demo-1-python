@@ -9,18 +9,20 @@ from ..shared import humanitecerrorresponse as shared_humanitecerrorresponse
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class PostOrgsOrgIDAppsRequest:
-    
     application_creation_request: shared_applicationcreationrequest.ApplicationCreationRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     r"""The request ID, Human-friendly name and environment of the Application."""
     org_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'orgId', 'style': 'simple', 'explode': False }})
     r"""The Organization ID."""
     
 
+
+
+
 @dataclasses.dataclass
 class PostOrgsOrgIDAppsResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     application_response: Optional[shared_applicationresponse.ApplicationResponse] = dataclasses.field(default=None)
@@ -29,3 +31,4 @@ class PostOrgsOrgIDAppsResponse:
     r"""The request body was unparseable."""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     
+

@@ -1,0 +1,12 @@
+# GetOrgsOrgIDAppsAppIDSetsSetIDResponse
+
+
+## Fields
+
+| Field                                                                                 | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `content_type`                                                                        | *str*                                                                                 | :heavy_check_mark:                                                                    | N/A                                                                                   |
+| `status_code`                                                                         | *int*                                                                                 | :heavy_check_mark:                                                                    | N/A                                                                                   |
+| `raw_response`                                                                        | [requests.Response](https://requests.readthedocs.io/en/latest/api/#requests.Response) | :heavy_minus_sign:                                                                    | N/A                                                                                   |
+| `get_orgs_org_id_apps_app_id_sets_set_id_200_application_json_one_of`                 | *Optional[Any]*                                                                       | :heavy_minus_sign:                                                                    | The Requested Deployment Set.<br/><br/>                                               |
+| `get_orgs_org_id_apps_app_id_sets_set_id_404_application_json_string`                 | *Optional[str]*                                                                       | :heavy_minus_sign:                                                                    | No Deployment Set with ID `setId` found in Application.<br/><br/>                     |

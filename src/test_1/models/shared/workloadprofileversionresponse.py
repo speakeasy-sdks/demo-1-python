@@ -11,10 +11,10 @@ from typing import Any
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class WorkloadProfileVersionResponse:
     r"""Each Workload Profile has one or more Versions associated with it. In order to add a version, a Workload Profile must first be created."""
-    
     created_at: datetime = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('created_at'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
     r"""Creation date"""
     created_by: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('created_by') }})
@@ -35,3 +35,4 @@ class WorkloadProfileVersionResponse:
     version: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('version') }})
     r"""Version"""
     
+

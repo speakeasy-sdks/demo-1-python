@@ -8,10 +8,10 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class AddArtefactVersionPayloadRequest:
     r"""AddArtefactVersionPayload describes the payload for a new ArtefactVersion request."""
-    
     name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name') }})
     r"""The Artefact name."""
     type: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('type') }})
@@ -25,3 +25,4 @@ class AddArtefactVersionPayloadRequest:
     version: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('version'), 'exclude': lambda f: f is None }})
     r"""(Optional) The Artefact Version."""
     
+

@@ -9,10 +9,10 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class EnvironmentResponse:
     r"""Environments are independent spaces where Applications can run. An Application is always deployed into an Environment."""
-    
     created_at: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('created_at') }})
     r"""The timestamp in UTC of when the Environment was created."""
     created_by: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('created_by') }})
@@ -34,3 +34,4 @@ class EnvironmentResponse:
     Deployments are made by applying _Deltas_ to a state defined by an existing Deployment. The Environment’s from_deploy property defines the Deployment. This Deployment is usually but not always in the current Environment. If the Deployment is from another Environment, the state of that Environment will be \"cloned\" into the current Environment with the option to apply a Delta.
     """
     
+

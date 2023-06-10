@@ -7,9 +7,9 @@ from ..shared import deploymenterrorresponse as shared_deploymenterrorresponse
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class GetOrgsOrgIDAppsAppIDEnvsEnvIDDeploysDeployIDErrorsRequest:
-    
     app_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'appId', 'style': 'simple', 'explode': False }})
     r"""The Application ID."""
     deploy_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'deployId', 'style': 'simple', 'explode': False }})
@@ -20,12 +20,15 @@ class GetOrgsOrgIDAppsAppIDEnvsEnvIDDeploysDeployIDErrorsRequest:
     r"""The Organization ID."""
     
 
+
+
+
 @dataclasses.dataclass
 class GetOrgsOrgIDAppsAppIDEnvsEnvIDDeploysDeployIDErrorsResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     deployment_error_responses: Optional[list[shared_deploymenterrorresponse.DeploymentErrorResponse]] = dataclasses.field(default=None)
     r"""A List of deployment errors, could be empty."""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     
+

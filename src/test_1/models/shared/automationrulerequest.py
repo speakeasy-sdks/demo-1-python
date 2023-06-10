@@ -8,10 +8,10 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class AutomationRuleRequest:
     r"""An Automation Rule defining how and when artefacts in an environment should be updated."""
-    
     type: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('type') }})
     r"""Specifies the type of event. Currently, only updates to either branches or tags are supported. Must be `\\"update\\"`."""
     active: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('active'), 'exclude': lambda f: f is None }})
@@ -31,3 +31,4 @@ class AutomationRuleRequest:
     update_to: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('update_to'), 'exclude': lambda f: f is None }})
     r"""DEPRECATED: Specifies whether the update occurs on commit to branch or creation of tag. Must be one of `\\"branch\\"` or `\\"tag\\"`."""
     
+

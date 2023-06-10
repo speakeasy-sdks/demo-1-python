@@ -7,12 +7,13 @@ from test_1 import utils
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class UserInviteRequestRequest:
     r"""UserInviteRequest describes a new user invitation."""
-    
     email: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('email') }})
     r"""The email address of the user from the profile."""
     role: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('role') }})
     r"""The role that this user would hold."""
     
+

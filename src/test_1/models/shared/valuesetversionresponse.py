@@ -13,10 +13,10 @@ from test_1 import utils
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class ValueSetVersionResponse:
     r"""A Value Set Version can be used as a track record of Shared Values changes, to restore a previous version of a Shared Value or Value Set, or to purge a Shared Value if it shouldn't be accessible anymore."""
-    
     change: list[shared_jsonpatchresponse.JSONPatchResponse] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('change') }})
     comment: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('comment') }})
     created_at: datetime = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('created_at'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
@@ -27,3 +27,4 @@ class ValueSetVersionResponse:
     updated_at: datetime = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('updated_at'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
     values: dict[str, shared_valueresponse.ValueResponse] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('values') }})
     
+

@@ -10,11 +10,12 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class ModuleDeltasRequest:
     r"""ModuleDeltas groups the different operations together."""
-    
     add: Optional[dict[str, dict[str, shared_controllerrequest.ControllerRequest]]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('add'), 'exclude': lambda f: f is None }})
     remove: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('remove'), 'exclude': lambda f: f is None }})
     update: Optional[dict[str, list[shared_updateactionrequest.UpdateActionRequest]]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('update'), 'exclude': lambda f: f is None }})
     
+

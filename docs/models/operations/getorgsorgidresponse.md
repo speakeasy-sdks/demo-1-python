@@ -1,0 +1,12 @@
+# GetOrgsOrgIDResponse
+
+
+## Fields
+
+| Field                                                                                 | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `content_type`                                                                        | *str*                                                                                 | :heavy_check_mark:                                                                    | N/A                                                                                   |
+| `error_info_response`                                                                 | [Optional[shared.ErrorInfoResponse]](../../models/shared/errorinforesponse.md)        | :heavy_minus_sign:                                                                    | Invalid request parameters or payload. E.g. invalid `orgId` format.<br/><br/>         |
+| `organization_response`                                                               | [Optional[shared.OrganizationResponse]](../../models/shared/organizationresponse.md)  | :heavy_minus_sign:                                                                    | Returns organization details.<br/><br/>                                               |
+| `status_code`                                                                         | *int*                                                                                 | :heavy_check_mark:                                                                    | N/A                                                                                   |
+| `raw_response`                                                                        | [requests.Response](https://requests.readthedocs.io/en/latest/api/#requests.Response) | :heavy_minus_sign:                                                                    | N/A                                                                                   |

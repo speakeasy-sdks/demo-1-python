@@ -8,9 +8,9 @@ from ..shared import humanitecerrorresponse as shared_humanitecerrorresponse
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class GetOrgsOrgIDAppsAppIDEnvsEnvIDDeploysDeployIDRequest:
-    
     app_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'appId', 'style': 'simple', 'explode': False }})
     r"""The Application ID."""
     deploy_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'deployId', 'style': 'simple', 'explode': False }})
@@ -21,9 +21,11 @@ class GetOrgsOrgIDAppsAppIDEnvsEnvIDDeploysDeployIDRequest:
     r"""The Organization ID."""
     
 
+
+
+
 @dataclasses.dataclass
 class GetOrgsOrgIDAppsAppIDEnvsEnvIDDeploysDeployIDResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     deployment_response: Optional[shared_deploymentresponse.DeploymentResponse] = dataclasses.field(default=None)
@@ -32,3 +34,4 @@ class GetOrgsOrgIDAppsAppIDEnvsEnvIDDeploysDeployIDResponse:
     r"""No Deployment with `deployId` in Application and Environment."""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     
+

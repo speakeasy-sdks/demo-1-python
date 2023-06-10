@@ -8,10 +8,10 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class ArtefactVersionResponse:
     r"""An Artefact Version represents a particular version of an Artefact that can be added to an Application."""
-    
     archived: bool = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('archived') }})
     r"""If the Artefact Version is archived."""
     artefact_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('artefact_id') }})
@@ -37,3 +37,4 @@ class ArtefactVersionResponse:
     updated_by: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('updated_by'), 'exclude': lambda f: f is None }})
     r"""The user ID of the user who performed the last updated on the Artefact Version."""
     
+

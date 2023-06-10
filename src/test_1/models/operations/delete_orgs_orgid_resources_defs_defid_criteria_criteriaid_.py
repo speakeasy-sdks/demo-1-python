@@ -8,9 +8,9 @@ from ..shared import resourcedefinitionchangeresponse as shared_resourcedefiniti
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class DeleteOrgsOrgIDResourcesDefsDefIDCriteriaCriteriaIDRequest:
-    
     criteria_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'criteriaId', 'style': 'simple', 'explode': False }})
     r"""The Matching Criteria ID."""
     def_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'defId', 'style': 'simple', 'explode': False }})
@@ -21,9 +21,11 @@ class DeleteOrgsOrgIDResourcesDefsDefIDCriteriaCriteriaIDRequest:
     r"""If set to `true`, the Matching Criteria is deleted immediately, even if this action affects existing Active Resources."""
     
 
+
+
+
 @dataclasses.dataclass
 class DeleteOrgsOrgIDResourcesDefsDefIDCriteriaCriteriaIDResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     delete_orgs_org_id_resources_defs_def_id_criteria_criteria_id_404_application_json_string: Optional[str] = dataclasses.field(default=None)
@@ -34,3 +36,4 @@ class DeleteOrgsOrgIDResourcesDefsDefIDCriteriaCriteriaIDResponse:
     resource_definition_change_responses: Optional[list[shared_resourcedefinitionchangeresponse.ResourceDefinitionChangeResponse]] = dataclasses.field(default=None)
     r"""One or more Active Resources reference the Resource Definition through this Matching Criteria."""
     
+

@@ -9,18 +9,20 @@ from ..shared import userprofileextendedresponse as shared_userprofileextendedre
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class PostOrgsOrgIDUsersRequest:
-    
     new_service_user_request: shared_newserviceuserrequest.NewServiceUserRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     r"""The user ID and the role"""
     org_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'orgId', 'style': 'simple', 'explode': False }})
     r"""The Organization ID."""
     
 
+
+
+
 @dataclasses.dataclass
 class PostOrgsOrgIDUsersResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     humanitec_error_response: Optional[shared_humanitecerrorresponse.HumanitecErrorResponse] = dataclasses.field(default=None)
@@ -29,3 +31,4 @@ class PostOrgsOrgIDUsersResponse:
     user_profile_extended_response: Optional[shared_userprofileextendedresponse.UserProfileExtendedResponse] = dataclasses.field(default=None)
     r"""The extended user profile of the user."""
     
+

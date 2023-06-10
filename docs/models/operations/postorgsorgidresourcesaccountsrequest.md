@@ -1,0 +1,9 @@
+# PostOrgsOrgIDResourcesAccountsRequest
+
+
+## Fields
+
+| Field                                                                                                    | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `create_resource_account_request_request`                                                                | [shared.CreateResourceAccountRequestRequest](../../models/shared/createresourceaccountrequestrequest.md) | :heavy_check_mark:                                                                                       | N/A                                                                                                      |
+| `org_id`                                                                                                 | *str*                                                                                                    | :heavy_check_mark:                                                                                       | The Organization ID.<br/><br/>                                                                           |

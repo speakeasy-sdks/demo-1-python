@@ -9,9 +9,9 @@ from ..shared import errorinforesponse as shared_errorinforesponse
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class PutOrgsOrgIDAppsAppIDEnvsEnvIDRulesRuleIDRequest:
-    
     app_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'appId', 'style': 'simple', 'explode': False }})
     r"""The Application ID."""
     automation_rule_request: shared_automationrulerequest.AutomationRuleRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
@@ -24,9 +24,11 @@ class PutOrgsOrgIDAppsAppIDEnvsEnvIDRulesRuleIDRequest:
     r"""The Automation Rule ID."""
     
 
+
+
+
 @dataclasses.dataclass
 class PutOrgsOrgIDAppsAppIDEnvsEnvIDRulesRuleIDResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     automation_rule_response: Optional[shared_automationruleresponse.AutomationRuleResponse] = dataclasses.field(default=None)
@@ -35,3 +37,4 @@ class PutOrgsOrgIDAppsAppIDEnvsEnvIDRulesRuleIDResponse:
     r"""The input was not a valid Automation Rule."""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     
+

@@ -11,6 +11,7 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class DeltaRequest:
     r"""A Deployment Delta (or just \\"Delta\\") describes the changes that must be applied to one Deployment Set to generate another Deployment Set. Deployment Deltas are the only way to create new Deployment Sets.
@@ -43,7 +44,6 @@ class DeltaRequest:
      }
     ```
     """
-    
     id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id'), 'exclude': lambda f: f is None }})
     r"""Ignored, but can be provided."""
     metadata: Optional[shared_deltametadatarequest.DeltaMetadataRequest] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('metadata'), 'exclude': lambda f: f is None }})
@@ -51,3 +51,4 @@ class DeltaRequest:
     r"""ModuleDeltas groups the different operations together."""
     shared: Optional[list[shared_updateactionrequest.UpdateActionRequest]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('shared'), 'exclude': lambda f: f is None }})
     
+

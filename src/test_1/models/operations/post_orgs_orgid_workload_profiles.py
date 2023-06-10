@@ -9,18 +9,20 @@ from ..shared import workloadprofileresponse as shared_workloadprofileresponse
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class PostOrgsOrgIDWorkloadProfilesRequest:
-    
     org_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'orgId', 'style': 'simple', 'explode': False }})
     r"""The Organization ID."""
     workload_profile_request: shared_workloadprofilerequest.WorkloadProfileRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     r"""Workload profile details."""
     
 
+
+
+
 @dataclasses.dataclass
 class PostOrgsOrgIDWorkloadProfilesResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     humanitec_error_response: Optional[shared_humanitecerrorresponse.HumanitecErrorResponse] = dataclasses.field(default=None)
@@ -29,3 +31,4 @@ class PostOrgsOrgIDWorkloadProfilesResponse:
     workload_profile_response: Optional[shared_workloadprofileresponse.WorkloadProfileResponse] = dataclasses.field(default=None)
     r"""The newly created Workload Profile."""
     
+

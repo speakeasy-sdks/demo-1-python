@@ -7,13 +7,13 @@ from test_1 import utils
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class ResourceAccountResponse:
     r"""ResourceAccount represents the account being used to access a resource.
     
     Resource Accounts hold credentials that are required to provision and manage resources.
     """
-    
     created_at: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('created_at') }})
     r"""The timestamp of when the account was created."""
     created_by: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('created_by') }})
@@ -27,3 +27,4 @@ class ResourceAccountResponse:
     type: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('type') }})
     r"""The type of the account"""
     
+

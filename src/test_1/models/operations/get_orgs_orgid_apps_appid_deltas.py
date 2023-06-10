@@ -7,9 +7,9 @@ from ..shared import deltaresponse as shared_deltaresponse
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class GetOrgsOrgIDAppsAppIDDeltasRequest:
-    
     app_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'appId', 'style': 'simple', 'explode': False }})
     r"""The Application ID."""
     org_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'orgId', 'style': 'simple', 'explode': False }})
@@ -20,12 +20,15 @@ class GetOrgsOrgIDAppsAppIDDeltasRequest:
     r"""Only return Deltas associated with the specified Environment."""
     
 
+
+
+
 @dataclasses.dataclass
 class GetOrgsOrgIDAppsAppIDDeltasResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     delta_responses: Optional[list[shared_deltaresponse.DeltaResponse]] = dataclasses.field(default=None)
     r"""A possibly empty list of Deployment Deltas."""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     
+

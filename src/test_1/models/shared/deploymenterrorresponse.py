@@ -7,10 +7,10 @@ from test_1 import utils
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class DeploymentErrorResponse:
     r"""DeploymentError is an error happening during deployment"""
-    
     code: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('code') }})
     error_type: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('error_type') }})
     message: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('message') }})
@@ -18,3 +18,4 @@ class DeploymentErrorResponse:
     scope: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('scope') }})
     summary: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('summary') }})
     
+

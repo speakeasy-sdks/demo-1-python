@@ -7,9 +7,9 @@ from ..shared import humanitecerrorresponse as shared_humanitecerrorresponse
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class PutOrgsOrgIDAppsAppIDEnvsEnvIDFromDeployIDRequest:
-    
     app_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'appId', 'style': 'simple', 'explode': False }})
     r"""The Application ID."""
     env_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'envId', 'style': 'simple', 'explode': False }})
@@ -20,12 +20,15 @@ class PutOrgsOrgIDAppsAppIDEnvsEnvIDFromDeployIDRequest:
     r"""The Deployment ID to rebase to."""
     
 
+
+
+
 @dataclasses.dataclass
 class PutOrgsOrgIDAppsAppIDEnvsEnvIDFromDeployIDResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     humanitec_error_response: Optional[shared_humanitecerrorresponse.HumanitecErrorResponse] = dataclasses.field(default=None)
     r"""No Deployment with ID in Application."""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     
+

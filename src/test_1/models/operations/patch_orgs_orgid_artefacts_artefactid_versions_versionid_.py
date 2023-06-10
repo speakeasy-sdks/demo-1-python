@@ -9,9 +9,9 @@ from ..shared import updateartefactversionpayloadrequest as shared_updateartefac
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class PatchOrgsOrgIDArtefactsArtefactIDVersionsVersionIDRequest:
-    
     artefact_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'artefactId', 'style': 'simple', 'explode': False }})
     r"""The Artefact ID."""
     org_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'orgId', 'style': 'simple', 'explode': False }})
@@ -22,9 +22,11 @@ class PatchOrgsOrgIDArtefactsArtefactIDVersionsVersionIDRequest:
     r"""The Version ID."""
     
 
+
+
+
 @dataclasses.dataclass
 class PatchOrgsOrgIDArtefactsArtefactIDVersionsVersionIDResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     artefact_version_response: Optional[shared_artefactversionresponse.ArtefactVersionResponse] = dataclasses.field(default=None)
@@ -33,3 +35,4 @@ class PatchOrgsOrgIDArtefactsArtefactIDVersionsVersionIDResponse:
     r"""One or more request parameters are missing or invalid, or the requested payload is not provided or malformed."""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     
+

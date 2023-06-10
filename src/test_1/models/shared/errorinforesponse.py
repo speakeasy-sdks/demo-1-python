@@ -7,10 +7,11 @@ from test_1 import utils
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class ErrorInfoResponse:
     r"""ErrorInfo is returned by a handler in case of an error."""
-    
     error: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('error') }})
     r"""An error details"""
     
+

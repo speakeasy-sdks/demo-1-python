@@ -8,18 +8,20 @@ from ..shared import humanitecerrorresponse as shared_humanitecerrorresponse
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class DeleteOrgsOrgIDEnvTypesEnvTypeIDRequest:
-    
     env_type_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'envTypeId', 'style': 'simple', 'explode': False }})
     r"""ID of the Environment Type."""
     org_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'orgId', 'style': 'simple', 'explode': False }})
     r"""The Organization ID."""
     
 
+
+
+
 @dataclasses.dataclass
 class DeleteOrgsOrgIDEnvTypesEnvTypeIDResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     delete_orgs_org_id_env_types_env_type_id_409_application_json_objects: Optional[list[dict[str, str]]] = dataclasses.field(default=None)
@@ -33,3 +35,4 @@ class DeleteOrgsOrgIDEnvTypesEnvTypeIDResponse:
     r"""The Authorization header was not present or invalid."""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     
+

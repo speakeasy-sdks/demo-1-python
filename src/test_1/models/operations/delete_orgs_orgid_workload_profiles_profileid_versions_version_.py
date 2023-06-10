@@ -7,9 +7,9 @@ from ..shared import humanitecerrorresponse as shared_humanitecerrorresponse
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class DeleteOrgsOrgIDWorkloadProfilesProfileIDVersionsVersionRequest:
-    
     org_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'orgId', 'style': 'simple', 'explode': False }})
     r"""The Organization ID."""
     profile_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'profileId', 'style': 'simple', 'explode': False }})
@@ -18,12 +18,15 @@ class DeleteOrgsOrgIDWorkloadProfilesProfileIDVersionsVersionRequest:
     r"""The Version."""
     
 
+
+
+
 @dataclasses.dataclass
 class DeleteOrgsOrgIDWorkloadProfilesProfileIDVersionsVersionResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     humanitec_error_response: Optional[shared_humanitecerrorresponse.HumanitecErrorResponse] = dataclasses.field(default=None)
     r"""The Workload Profile Version is not found or is not accessible by the organization."""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     
+

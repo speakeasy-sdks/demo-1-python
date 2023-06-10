@@ -8,13 +8,13 @@ from test_1 import utils
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class ImageResponse:
     r"""DEPRECATED: This type exists for historical compatibility and should not be used. Please use the [Artefact API](https://api-docs.humanitec.com/#tag/Artefact) instead.
     
     Container Images (known simply as Images) can be registered with Humanitec. Continuous Integration (CI) pipelines can then notify Humanitec when a new build of a Container Image becomes available. Humanitec tracks the Image along with metadata about how it was built.
     """
-    
     added_at: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('added_at') }})
     r"""The time the first build of this Image was added to the organization"""
     builds: list[shared_imagebuildresponse.ImageBuildResponse] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('builds') }})
@@ -24,3 +24,4 @@ class ImageResponse:
     source: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('source') }})
     r"""The Image Source that this Image is added via"""
     
+

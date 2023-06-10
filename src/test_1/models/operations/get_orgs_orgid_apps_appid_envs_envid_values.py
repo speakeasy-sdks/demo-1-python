@@ -7,9 +7,9 @@ from ..shared import valueresponse as shared_valueresponse
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class GetOrgsOrgIDAppsAppIDEnvsEnvIDValuesRequest:
-    
     app_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'appId', 'style': 'simple', 'explode': False }})
     r"""The Application ID."""
     env_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'envId', 'style': 'simple', 'explode': False }})
@@ -18,12 +18,15 @@ class GetOrgsOrgIDAppsAppIDEnvsEnvIDValuesRequest:
     r"""The Organization ID."""
     
 
+
+
+
 @dataclasses.dataclass
 class GetOrgsOrgIDAppsAppIDEnvsEnvIDValuesResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     value_responses: Optional[list[shared_valueresponse.ValueResponse]] = dataclasses.field(default=None)
     r"""A possibly empty list of Values."""
     
+
